@@ -8,7 +8,6 @@
   <title>Forklift-Mounted Large-Duct Support Saddle | Tallon Anderson</title>
 
   <style>
-
     :root {
       --navy: #17354a;
       --blue: #236a8c;
@@ -24,10 +23,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -35,8 +30,6 @@
       background: var(--white);
       line-height: 1.6;
     }
-
-    /* HEADER */
 
     .site-header {
       background: var(--white);
@@ -71,8 +64,6 @@
       text-decoration: underline;
     }
 
-    /* HERO */
-
     .hero {
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
@@ -94,20 +85,18 @@
     }
 
     h1 {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 54px);
       line-height: 1.1;
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
     }
-
-    /* PAGE */
 
     main {
       max-width: 1050px;
@@ -131,11 +120,18 @@
       margin-top: 0;
     }
 
-    /* OVERVIEW */
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
 
     .summary {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.55fr 0.85fr;
       gap: 34px;
       margin-bottom: 42px;
     }
@@ -152,8 +148,6 @@
       font-weight: 600;
     }
 
-    /* CONTENT CARDS */
-
     .content-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -168,102 +162,104 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 9px;
-    }
-
-    /* MODULAR DESIGN */
-
-    .modular-section {
+    .configuration-section {
       margin: 48px 0;
     }
 
-    .modular-flow {
-      margin-top: 25px;
+    .configuration-grid {
       display: grid;
-      grid-template-columns: 1fr 70px 1fr;
-      align-items: center;
-      gap: 15px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
     }
 
-    .module {
-      padding: 28px;
+    .configuration-item {
+      padding: 22px;
       background: var(--light-blue);
       border: 1px solid var(--border);
       border-radius: 6px;
-      text-align: center;
     }
 
-    .module strong {
+    .configuration-item strong {
       display: block;
-      margin-bottom: 8px;
       color: var(--navy);
-      font-size: 18px;
+      margin-bottom: 6px;
     }
 
-    .plus {
-      color: var(--blue);
-      font-size: 35px;
-      font-weight: bold;
-      text-align: center;
+    .configuration-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
     }
-
-    /* IMAGES */
 
     .image-section {
       margin: 48px 0;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+    .image-intro {
+      max-width: 850px;
+      color: var(--muted);
     }
 
-    .image-placeholder {
-      min-height: 300px;
-      padding: 40px;
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .image-card {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      padding: 14px;
       background: var(--light-gray);
-      border: 2px dashed #aebbc4;
+      border: 1px solid var(--border);
       border-radius: 6px;
-      color: var(--muted);
-      text-align: center;
+    }
+
+    .image-card img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 4px;
     }
 
     .caption {
-      margin-top: 10px;
+      margin: 10px 2px 2px;
       color: var(--muted);
       font-size: 13px;
     }
 
-    /* SIGNIFICANCE */
+    .result-section {
+      margin: 45px 0;
+      padding: 30px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
 
-    .project-significance {
-      margin-top: 48px;
+    .result-section p {
+      margin-bottom: 0;
+    }
+
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
-
-    /* FOOTER */
 
     footer {
       padding: 30px 24px;
@@ -273,22 +269,20 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 750px) {
-
       .summary,
       .content-grid,
-      .image-grid,
-      .modular-flow {
+      .configuration-grid,
+      .image-grid {
         grid-template-columns: 1fr;
       }
 
-      .plus {
-        transform: rotate(0deg);
+      .image-card img {
+        height: auto;
+        max-height: 650px;
       }
 
-      .project-significance ul {
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -301,13 +295,21 @@
       }
     }
 
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+    }
   </style>
 </head>
 
 
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -326,14 +328,12 @@
   </header>
 
 
-  <!-- HERO -->
-
   <section class="hero">
 
     <div class="hero-content">
 
       <p class="eyebrow">
-        Project 04 | Material Handling & Fixture Design
+        Project 04 | Material Handling &amp; Assembly Support
       </p>
 
       <h1>
@@ -341,9 +341,8 @@
       </h1>
 
       <p class="subtitle">
-        Modular material-handling fixture using a common welded base
-        and interchangeable saddle assemblies to support multiple
-        large-duct diameter ranges.
+        Modular support fixture developed to provide stable support for
+        large-diameter ductwork during handling and angle-ring installation.
       </p>
 
     </div>
@@ -351,36 +350,31 @@
   </section>
 
 
-  <!-- MAIN CONTENT -->
-
   <main>
 
-
-    <!-- PROJECT OVERVIEW -->
 
     <section class="summary">
 
       <div>
 
-        <h2>
-          Project Overview
-        </h2>
+        <h2>Project Overview</h2>
 
         <p>
-          Designed a forklift-mounted saddle to support large-diameter
-          ductwork during angle-ring installation.
+          Designed a forklift-mounted saddle for supporting large-diameter
+          ductwork during angle-ring installation and related fabrication
+          operations.
         </p>
 
         <p>
-          Rather than creating a separate complete fixture for each duct
-          size, the design uses a common welded base frame with removable
-          upper roller-weldment saddle assemblies.
+          The fixture uses a rigid common base with curved support members that
+          cradle the duct. The forklift provides a practical means of
+          positioning the support fixture where it is needed in the production
+          area.
         </p>
 
         <p>
-          Three interchangeable upper assemblies provide different support
-          radii so the fixture can be configured for different duct-size
-          ranges while retaining the same base and forklift interface.
+          The design allows different curved saddle assemblies to be used with
+          the common base so the fixture can support multiple duct sizes.
         </p>
 
       </div>
@@ -388,14 +382,11 @@
 
       <aside class="impact-card">
 
-        <h3>
-          Impact
-        </h3>
+        <h3>Impact</h3>
 
         <p>
-          One reusable base supports multiple duct-diameter ranges,
-          reducing the need for separate complete fixtures while providing
-          a stable support method for duct handling and fit-up.
+          Provides a stable, reusable support method for large ductwork while
+          assisting handling, positioning, and angle-ring fit-up.
         </p>
 
       </aside>
@@ -403,29 +394,28 @@
     </section>
 
 
-    <!-- DESIGN RESPONSE -->
-
     <section class="content-grid">
 
+
       <article class="content-card">
 
-        <h2>
-          Design Response
-        </h2>
+        <h2>Problem Addressed</h2>
 
         <ul>
-          <li>Rigid forklift-compatible welded base frame</li>
-
           <li>
-            Three removable roller-weldment saddle assemblies
+            Large-diameter duct requires stable support during fabrication
           </li>
 
           <li>
-            Different saddle radius for each applicable duct-size range
+            Support needs vary with duct diameter
           </li>
 
           <li>
-            Curved, padded contact surfaces for supporting the duct
+            The fixture needs to be movable within the production area
+          </li>
+
+          <li>
+            Duct surfaces require appropriate support at the contact points
           </li>
         </ul>
 
@@ -434,194 +424,216 @@
 
       <article class="content-card">
 
-        <h2>
-          Modular Configuration
-        </h2>
+        <h2>Design Response</h2>
 
         <ul>
           <li>
-            Common lower structure remains mounted to the forklift
+            Rigid welded-steel common base
           </li>
 
           <li>
-            Upper saddle assembly is swapped as duct size changes
+            Forklift-compatible base for positioning
           </li>
 
           <li>
-            Forklift interface is reused across configurations
+            Curved saddle members matching the supported duct geometry
           </li>
 
           <li>
-            Modular construction avoids duplicating the entire fixture
+            Padded duct-contact surfaces
+          </li>
+
+          <li>
+            Interchangeable saddle assemblies for different duct sizes
+          </li>
+
+          <li>
+            Reusable alternative to improvised support methods
           </li>
         </ul>
 
       </article>
+
 
     </section>
 
 
-    <!-- MODULAR DESIGN -->
+    <section class="configuration-section">
 
-    <section class="modular-section">
+      <h2>Modular Configuration</h2>
 
-      <h2>
-        Modular Design Concept
-      </h2>
-
-      <p>
-        The fixture separates the universal material-handling interface
-        from the duct-specific support geometry.
-      </p>
+      <div class="configuration-grid">
 
 
-      <div class="modular-flow">
+        <div class="configuration-item">
 
-        <div class="module">
+          <strong>Common Base Weldment</strong>
 
-          <strong>
-            Common Base Weldment
-          </strong>
-
-          Forklift-mounted structural base reused for each configuration.
+          <p>
+            A single structural base provides the forklift interface and
+            supporting framework for the removable saddle assemblies.
+          </p>
 
         </div>
 
 
-        <div class="plus">
-          +
-        </div>
+        <div class="configuration-item">
 
+          <strong>Interchangeable Saddles</strong>
 
-        <div class="module">
-
-          <strong>
-            Interchangeable Saddle
-          </strong>
-
-          Radius-specific roller-weldment assembly selected for the
-          duct size being supported.
+          <p>
+            Radius-specific curved support members can be changed to suit
+            different duct diameters while retaining the same base fixture.
+          </p>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- DESIGN CONSIDERATIONS -->
-
-    <section class="content-grid">
-
-      <article class="content-card">
-
-        <h2>
-          Engineering Considerations
-        </h2>
-
-        <ul>
-          <li>Duct diameter and saddle contact radius</li>
-          <li>Fixture stability during positioning</li>
-          <li>Forklift compatibility and placement</li>
-          <li>Duct-contact surface protection</li>
-          <li>Ease of changing upper saddle assemblies</li>
-        </ul>
-
-      </article>
-
-
-      <article class="content-card">
-
-        <h2>
-          Production Value
-        </h2>
-
-        <ul>
-          <li>Reusable fixture architecture</li>
-          <li>Adaptability across multiple duct sizes</li>
-          <li>Reduced reliance on improvised blocking</li>
-          <li>Controlled support during angle-ring fit-up</li>
-          <li>Simple configuration changes for shop-floor use</li>
-        </ul>
-
-      </article>
-
-    </section>
-
-
-    <!-- IMAGES -->
-
     <section class="image-section">
 
-      <h2>
-        Fixture & CAD Development
-      </h2>
+      <h2>Fixture &amp; CAD Development</h2>
 
-      <p>
-        The final project page will show both the physical fixture and
-        the exploded CAD assembly so the modular design can be understood
-        visually.
+      <p class="image-intro">
+        The CAD view shows the relationship between the common base and
+        interchangeable curved saddle assemblies, while the installed view
+        shows the completed forklift-mounted fixture on the shop floor.
       </p>
 
 
       <div class="image-grid">
 
-        <div>
 
-          <div class="image-placeholder">
-            Installed fixture photograph will go here.
-          </div>
+        <div class="image-card">
+
+          <img
+            src="duct-saddle-cad.png"
+            alt="Exploded CAD view of modular forklift-mounted duct support saddle"
+          >
 
           <p class="caption">
-            Forklift-mounted saddle supporting large-diameter ductwork.
+            Exploded CAD view showing the common base and interchangeable
+            radius-specific saddle assemblies.
           </p>
 
         </div>
 
 
-        <div>
+        <div class="image-card">
 
-          <div class="image-placeholder">
-            Exploded CAD assembly will go here.
-          </div>
+          <img
+            src="duct-saddle-installed.jpg"
+            alt="Completed forklift-mounted duct support saddle in the shop"
+          >
 
           <p class="caption">
-            Exploded CAD view showing the common base frame and
-            interchangeable roller-weldment saddle assemblies.
+            Completed forklift-mounted fixture with padded curved supports
+            positioned for shop-floor use.
           </p>
 
         </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- PORTFOLIO SIGNIFICANCE -->
+    <section class="content-grid">
 
-    <section class="project-significance">
 
-      <h2>
-        Portfolio Significance
-      </h2>
+      <article class="content-card">
+
+        <h2>Engineering Considerations</h2>
+
+        <ul>
+          <li>
+            Support geometry appropriate for large round ductwork
+          </li>
+
+          <li>
+            Stable load transfer into the structural base
+          </li>
+
+          <li>
+            Forklift access and fixture positioning
+          </li>
+
+          <li>
+            Interchangeability between different saddle configurations
+          </li>
+
+          <li>
+            Contact surfaces that limit direct hard-metal contact with the duct
+          </li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Production Value</h2>
+
+        <p>
+          The modular approach allows the shop to retain one common base while
+          changing the curved support geometry for different duct sizes. This
+          reduces the need for separate complete fixtures while maintaining a
+          dedicated support method for recurring fabrication work.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="result-section">
+
+      <h2>Result</h2>
+
+      <p>
+        The completed fixture provides a stable and reusable support method for
+        large-diameter ductwork. The forklift-compatible base allows the
+        fixture to be positioned where required, while the curved padded
+        supports help cradle the duct during angle-ring installation and
+        fabrication.
+      </p>
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
 
       <ul>
         <li>
-          Developed a practical material-handling fixture around an
-          existing forklift interface
+          Developed a practical material-handling fixture for large ductwork
         </li>
 
         <li>
-          Used modular design to accommodate multiple product sizes
+          Created a modular common-base design
         </li>
 
         <li>
-          Integrated fabricated weldments with replaceable components
+          Incorporated interchangeable radius-specific support assemblies
         </li>
 
         <li>
-          Used CAD assembly development to evaluate fit,
-          interfaces, and configuration changes
+          Integrated the fixture with existing forklift equipment
+        </li>
+
+        <li>
+          Used CAD to develop and communicate the modular design
+        </li>
+
+        <li>
+          Demonstrates practical fixture design and manufacturing support
         </li>
       </ul>
 
@@ -630,8 +642,6 @@
 
   </main>
 
-
-  <!-- FOOTER -->
 
   <footer>
     Tallon Anderson | Mechanical Engineering Portfolio
