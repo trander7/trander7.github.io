@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -84,14 +85,14 @@
     }
 
     h1 {
-      max-width: 760px;
+      max-width: 900px;
       margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 54px);
       line-height: 1.1;
     }
 
     .subtitle {
-      max-width: 720px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
@@ -101,13 +102,6 @@
       max-width: 1050px;
       margin: 0 auto;
       padding: 55px 24px 80px;
-    }
-
-    .summary {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 34px;
-      margin-bottom: 42px;
     }
 
     h2 {
@@ -124,6 +118,22 @@
 
     p {
       margin-top: 0;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.55fr 0.85fr;
+      gap: 34px;
+      margin-bottom: 42px;
     }
 
     .impact-card {
@@ -152,50 +162,75 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
+    .comparison-section {
+      margin: 48px 0;
     }
 
-    li {
-      margin-bottom: 9px;
-    }
-
-    .image-section {
-      margin: 45px 0;
-    }
-
-    .image-placeholder {
-      min-height: 340px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--light-gray);
-      border: 2px dashed #aebbc4;
-      border-radius: 6px;
+    .comparison-intro {
+      max-width: 850px;
       color: var(--muted);
-      text-align: center;
+      margin-bottom: 22px;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .image-card {
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .image-card h3 {
+      margin: 5px 2px 12px;
+    }
+
+    .image-card img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 4px;
     }
 
     .caption {
-      margin-top: 10px;
+      margin: 12px 2px 2px;
       color: var(--muted);
       font-size: 13px;
     }
 
-    .project-significance {
+    .engineering-section {
+      margin: 48px 0;
+      padding: 30px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .engineering-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
@@ -210,11 +245,17 @@
 
     @media (max-width: 750px) {
       .summary,
-      .content-grid {
+      .content-grid,
+      .image-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-significance ul {
+      .image-card img {
+        height: auto;
+        max-height: 650px;
+      }
+
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -226,105 +267,316 @@
         padding-top: 40px;
       }
     }
+
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+    }
   </style>
 </head>
 
+
 <body>
+
   <header class="site-header">
+
     <nav class="nav">
-      <a class="brand" href="../index.html">TALLON ANDERSON</a>
-      <a class="back-link" href="../index.html">&#8592; Back to selected work</a>
+
+      <a class="brand" href="../index.html">
+        TALLON ANDERSON
+      </a>
+
+      <a class="back-link" href="../index.html#work">
+        &#8592; Back to selected work
+      </a>
+
     </nav>
+
   </header>
 
+
   <section class="hero">
+
     <div class="hero-content">
-      <p class="eyebrow">Project 05 | Equipment Protection</p>
-      <h1>Shock-Absorbing Trolley End Stop</h1>
-      <p class="subtitle">
-        Integration of an industrial shock absorber into an overhead
-        trolley-track end stop to reduce abrupt impact loading and protect
-        trolley components.
+
+      <p class="eyebrow">
+        Project 05 | Equipment Protection &amp; Impact Mitigation
       </p>
+
+      <h1>
+        Shock-Absorbing Trolley End Stop
+      </h1>
+
+      <p class="subtitle">
+        Development of an energy-absorbing end-stop concept for an overhead
+        trolley system to reduce abrupt impact loading and protect trolley
+        components.
+      </p>
+
     </div>
+
   </section>
 
+
   <main>
+
+
     <section class="summary">
+
       <div>
+
         <h2>Project Overview</h2>
+
         <p>
           Developed a shock-absorbing end-stop concept for overhead trolleys
-          traveling on an I-beam track. If a manually positioned track switch
-          is not changed, a loaded trolley can contact a rigid end stop and
-          create an abrupt impact.
+          traveling on an I-beam track.
         </p>
+
         <p>
-          The design introduces a controlled deceleration stroke while retaining
-          a positive mechanical stop behind the shock absorber.
+          If a manually positioned track switch is not changed, a loaded
+          trolley can contact the existing rigid end stop and create an abrupt
+          impact.
         </p>
+
+        <p>
+          The proposed design incorporates an industrial shock absorber into
+          the end-stop assembly to introduce a controlled deceleration stroke
+          before the trolley reaches the positive mechanical stop.
+        </p>
+
       </div>
 
+
       <aside class="impact-card">
+
         <h3>Impact</h3>
+
         <p>
           Increased stopping distance, reduced peak impact loading, and lower
           risk of damage to trolley components.
         </p>
+
       </aside>
+
     </section>
+
 
     <section class="content-grid">
-      <article class="content-card">
-        <h2>Design Response</h2>
-        <ul>
-          <li>Industrial shock absorber aligned with trolley travel</li>
-          <li>Structural mount transferring reaction into the support frame</li>
-          <li>Dedicated contact surface for controlled engagement</li>
-          <li>Positive mechanical stop retained behind the absorber</li>
-        </ul>
-      </article>
+
 
       <article class="content-card">
-        <h2>Engineering Basis</h2>
-        <p>
-          The design uses additional stopping distance to dissipate trolley
-          kinetic energy over a controlled stroke.
-        </p>
-        <p>
-          Selection and validation depend on moving mass, impact velocity,
-          usable stroke, allowable force, impact frequency, and rated energy
-          capacity.
-        </p>
+
+        <h2>Problem Addressed</h2>
+
+        <ul>
+          <li>
+            Loaded trolley can reach the end of the track when the track switch
+            is not repositioned
+          </li>
+
+          <li>
+            Existing rigid stopping condition produces an abrupt impact
+          </li>
+
+          <li>
+            Impact loads are transferred directly into the trolley and
+            supporting structure
+          </li>
+
+          <li>
+            Repeated impacts create the potential for equipment damage
+          </li>
+        </ul>
+
       </article>
+
+
+      <article class="content-card">
+
+        <h2>Design Response</h2>
+
+        <ul>
+          <li>
+            Industrial shock absorber aligned with trolley travel
+          </li>
+
+          <li>
+            Structural mounting arrangement for the shock absorber
+          </li>
+
+          <li>
+            Dedicated contact surface for controlled engagement
+          </li>
+
+          <li>
+            Additional travel used to decelerate the trolley
+          </li>
+
+          <li>
+            Positive mechanical stop retained behind the absorber
+          </li>
+        </ul>
+
+      </article>
+
+
     </section>
 
-    <section class="image-section">
-      <h2>Design Development</h2>
 
-      <div class="image-placeholder">
-        Add the trolley end-stop CAD image here after the page is working.
+    <section class="comparison-section">
+
+      <h2>Current vs. Proposed Configuration</h2>
+
+      <p class="comparison-intro">
+        The CAD views compare the existing trolley end-stop configuration with
+        the proposed shock-absorber arrangement. The comparison shows how the
+        energy-absorbing component is integrated into the existing trolley and
+        track geometry.
+      </p>
+
+
+      <div class="image-grid">
+
+
+        <div class="image-card">
+
+          <h3>Current Configuration</h3>
+
+          <img
+            src="trolley-end-stop-current.png"
+            alt="CAD model of current overhead trolley end-stop configuration"
+          >
+
+          <p class="caption">
+            Existing trolley and end-stop arrangement before integration of
+            the shock absorber.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <h3>Shock-Absorber Configuration</h3>
+
+          <img
+            src="trolley-end-stop-shock-absorber.png"
+            alt="CAD model of proposed overhead trolley shock-absorber end-stop configuration"
+          >
+
+          <p class="caption">
+            Proposed configuration incorporating an industrial shock absorber
+            to provide a controlled deceleration stroke.
+          </p>
+
+        </div>
+
+
       </div>
 
-      <p class="caption">
-        CAD development showing the trolley, track, structural support,
-        contact surface, and shock-absorber arrangement.
-      </p>
     </section>
 
-    <section class="project-significance">
-      <h2>Portfolio Significance</h2>
-      <ul>
-        <li>Identified a recurring equipment-damage mechanism</li>
-        <li>Developed a passive equipment-protection concept</li>
-        <li>Integrated new hardware with an existing trolley and track system</li>
-        <li>Used CAD to review interfaces, alignment, and mounting geometry</li>
-      </ul>
+
+    <section class="engineering-section">
+
+      <h2>Engineering Basis</h2>
+
+      <p>
+        The design uses additional stopping distance to dissipate trolley
+        kinetic energy over a controlled stroke rather than stopping the
+        trolley abruptly at a rigid interface.
+      </p>
+
+      <p>
+        Shock-absorber selection and design validation depend on the moving
+        mass, impact velocity, available stroke, allowable force, impact
+        frequency, and rated energy capacity of the selected absorber.
+      </p>
+
     </section>
+
+
+    <section class="content-grid">
+
+
+      <article class="content-card">
+
+        <h2>Mechanical Integration</h2>
+
+        <p>
+          The concept was developed around the existing trolley and track
+          arrangement. CAD was used to evaluate the available space, contact
+          alignment, mounting geometry, and relationship between the proposed
+          shock absorber and the existing end-stop structure.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Fail-Safe Stop</h2>
+
+        <p>
+          The concept retains a positive mechanical stop behind the
+          energy-absorbing element. The shock absorber provides the controlled
+          deceleration function while the mechanical stop remains part of the
+          end-stop arrangement.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
+
+      <ul>
+        <li>
+          Identified a recurring equipment-damage mechanism
+        </li>
+
+        <li>
+          Developed a passive equipment-protection concept
+        </li>
+
+        <li>
+          Evaluated the existing configuration before developing the solution
+        </li>
+
+        <li>
+          Integrated new hardware with an existing trolley and track system
+        </li>
+
+        <li>
+          Used CAD to review interfaces, alignment, and mounting geometry
+        </li>
+
+        <li>
+          Applied energy-management principles to a practical shop-floor issue
+        </li>
+      </ul>
+
+    </section>
+
+
   </main>
+
 
   <footer>
     Tallon Anderson | Mechanical Engineering Portfolio
   </footer>
+
+
 </body>
+
 </html>
