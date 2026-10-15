@@ -14,18 +14,22 @@
       --ink: #27313a;
       --muted: #66727c;
       --light: #eef3f6;
-      --white: #fff;
+      --white: #ffffff;
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       color: var(--ink);
-      background: #fff;
+      background: #ffffff;
       line-height: 1.55;
     }
 
@@ -39,12 +43,14 @@
       padding: 0 28px;
     }
 
+    /* HEADER */
+
     header {
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, .95);
+      background: rgba(255,255,255,.96);
       border-bottom: 1px solid #dde5e9;
-      z-index: 2;
+      z-index: 10;
     }
 
     nav {
@@ -67,8 +73,14 @@
       color: var(--muted);
     }
 
+    .navlinks a:hover {
+      color: var(--teal);
+    }
+
+    /* HERO */
+
     .hero {
-      background: linear-gradient(135deg, #10293e, #194d66);
+      background: linear-gradient(135deg,#10293e,#194d66);
       color: white;
       padding: 92px 0 84px;
     }
@@ -107,7 +119,14 @@
       border-radius: 5px;
       text-decoration: none;
       color: white;
+      transition: background .2s ease;
     }
+
+    .button:hover {
+      background: rgba(255,255,255,.1);
+    }
+
+    /* GENERAL SECTIONS */
 
     .section {
       padding: 70px 0;
@@ -129,12 +148,14 @@
       margin-bottom: 34px;
     }
 
+    /* FEATURED PROJECT */
+
     .feature {
       border: 1px solid #dce4e8;
       border-radius: 10px;
       overflow: hidden;
       background: white;
-      box-shadow: 0 8px 24px rgba(20, 47, 71, .06);
+      box-shadow: 0 8px 24px rgba(20,47,71,.06);
     }
 
     .feature-top {
@@ -147,6 +168,7 @@
       color: var(--teal);
       font-weight: 800;
       letter-spacing: .08em;
+      font-size: 12px;
     }
 
     .feature h3 {
@@ -178,9 +200,11 @@
       font-size: 13px;
     }
 
+    /* PROJECT GRID */
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
       gap: 20px;
     }
 
@@ -189,10 +213,6 @@
       border-radius: 8px;
       padding: 24px;
       background: white;
-    }
-
-    .card .num {
-      font-size: 12px;
     }
 
     .card h3 {
@@ -205,41 +225,33 @@
       font-size: 14px;
     }
 
-    /*
-      Clickable project styling applies to both the large feature
-      and the smaller project cards.
-    */
-    .project-link,
-    .feature-link {
-      display: block;
+    /* CLICKABLE PROJECT CARDS */
+
+    .project-link {
       text-decoration: none;
       color: inherit;
+      display: block;
       transition:
-        transform .15s ease,
-        box-shadow .15s ease,
-        border-color .15s ease;
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
     }
 
-    .project-link:hover,
-    .feature-link:hover {
+    .project-link:hover {
       transform: translateY(-3px);
-      border-color: #9fb9c5;
-      box-shadow: 0 10px 26px rgba(20, 47, 71, .11);
-    }
-
-    .project-link:focus-visible,
-    .feature-link:focus-visible {
-      outline: 3px solid #7fd1e5;
-      outline-offset: 4px;
+      box-shadow: 0 10px 24px rgba(20,47,71,.14);
+      border-color: #a9c9d6;
     }
 
     .view-project {
       display: inline-block;
-      margin-top: 12px;
+      margin-top: 8px;
       color: var(--teal);
       font-size: 13px;
       font-weight: 700;
     }
+
+    /* ABOUT */
 
     .about {
       display: grid;
@@ -257,6 +269,8 @@
       margin: 9px 0;
     }
 
+    /* FOOTER */
+
     footer {
       background: #10293e;
       color: #cbd8de;
@@ -264,9 +278,16 @@
       font-size: 13px;
     }
 
-    @media (max-width: 760px) {
+    /* MOBILE */
+
+    @media(max-width:760px) {
+
       .hero h1 {
         font-size: 40px;
+      }
+
+      .hero h2 {
+        font-size: 20px;
       }
 
       .grid,
@@ -281,33 +302,49 @@
       .section {
         padding: 50px 0;
       }
+
+      .hero {
+        padding: 65px 0;
+      }
     }
   </style>
 </head>
 
 <body>
 
+  <!-- HEADER -->
+
   <header>
     <div class="wrap">
       <nav>
-        <div class="brand">TALLON ANDERSON</div>
+
+        <div class="brand">
+          TALLON ANDERSON
+        </div>
 
         <div class="navlinks">
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </div>
+
       </nav>
     </div>
   </header>
 
 
+  <!-- HERO -->
+
   <section class="hero">
     <div class="wrap">
 
-      <div class="kicker">MECHANICAL ENGINEER</div>
+      <div class="kicker">
+        MECHANICAL ENGINEER
+      </div>
 
-      <h1>Tallon Anderson</h1>
+      <h1>
+        Tallon Anderson
+      </h1>
 
       <h2>
         Product Development · Mechanical Design · Manufacturing Engineering
@@ -327,30 +364,37 @@
   </section>
 
 
+  <!-- SELECTED WORK -->
+
   <section class="section" id="work">
     <div class="wrap">
 
-      <h2>Selected Engineering Work</h2>
+      <h2>
+        Selected Engineering Work
+      </h2>
 
       <p class="lead">
         Projects spanning production product development and practical
         manufacturing solutions.
       </p>
 
-      <a
-        href="projects/light-tower.html"
-        class="feature feature-link"
-        aria-label="View the Night-Lite GR-Series Light Tower project"
-      >
+
+      <!-- PROJECT 01 -->
+
+      <article class="feature">
 
         <div class="feature-top">
 
-          <div class="num">PROJECT 01</div>
+          <div class="num">
+            PROJECT 01
+          </div>
 
-          <h3>Night-Lite GR-Series Light Tower</h3>
+          <h3>
+            Night-Lite GR-Series Light Tower
+          </h3>
 
           <div class="role">
-            Lead Design Engineer · Allmand / Briggs &amp; Stratton
+            Lead Design Engineer · Allmand / Briggs & Stratton
           </div>
 
         </div>
@@ -358,9 +402,9 @@
         <div class="feature-body">
 
           <p>
-            Lead design responsibility for the Night-Lite GR-Series light tower,
-            with design knowledge across the frame, tower, enclosure, control
-            box, engine and generator mounts, and shrouds.
+            Lead design responsibility for the Night-Lite GR-Series light
+            tower, with design knowledge across the frame, tower, enclosure,
+            control box, engine and generator mounts, and shrouds.
           </p>
 
           <div class="tags">
@@ -371,75 +415,107 @@
             <span>Production Support</span>
           </div>
 
-          <span class="view-project">
-            View project &#8594;
-          </span>
-
         </div>
 
-      </a>
+      </article>
 
     </div>
   </section>
 
 
+  <!-- OTHER PROJECTS -->
+
   <section class="section alt">
+
     <div class="wrap">
 
       <div class="grid">
 
-        <div class="card">
-          <div class="num">PROJECT 02</div>
 
-          <h3>Angle Ring Stitch-Weld Templates</h3>
+        <!-- PROJECT 02 - CLICKABLE -->
+
+        <a href="projects/weld-templates.html"
+           class="card project-link">
+
+          <div class="num">
+            PROJECT 02
+          </div>
+
+          <h3>
+            Angle Ring Stitch-Weld Templates
+          </h3>
 
           <p>
-            Reusable size-based templates developed to improve weld-layout
-            consistency and repeatability.
+            Reusable size-based templates developed to improve
+            weld-layout consistency, weld location repeatability,
+            and fabrication efficiency.
           </p>
-        </div>
 
+          <span class="view-project">
+            View project →
+          </span>
+
+        </a>
+
+
+        <!-- PROJECT 03 -->
 
         <div class="card">
-          <div class="num">PROJECT 03</div>
 
-          <h3>Damper Shaft Assembly Press Tooling</h3>
+          <div class="num">
+            PROJECT 03
+          </div>
+
+          <h3>
+            Damper Shaft Assembly Press Tooling
+          </h3>
 
           <p>
             Dedicated press tooling for controlled shaft, seal,
             bearing-carrier, and bearing assembly.
           </p>
+
         </div>
 
 
-        <a
-          href="projects/duct-saddle.html"
-          class="card project-link"
-          aria-label="View the Forklift-Mounted Large-Duct Saddle project"
-        >
-          <div class="num">PROJECT 04</div>
+        <!-- PROJECT 04 - CLICKABLE -->
 
-          <h3>Forklift-Mounted Large-Duct Saddle</h3>
+        <a href="projects/duct-saddle.html"
+           class="card project-link">
+
+          <div class="num">
+            PROJECT 04
+          </div>
+
+          <h3>
+            Forklift-Mounted Large-Duct Saddle
+          </h3>
 
           <p>
-            Modular support fixture using a common forklift-mounted base and
-            interchangeable radius-specific saddle tops.
+            Modular support fixture using a common forklift-mounted base
+            and interchangeable radius-specific saddle assemblies for
+            multiple duct sizes.
           </p>
 
           <span class="view-project">
-            View project &#8594;
+            View project →
           </span>
+
         </a>
 
 
-        <a
-          href="projects/trolley-end-stop.html"
-          class="card project-link"
-          aria-label="View the Shock-Absorbing Trolley End Stop project"
-        >
-          <div class="num">PROJECT 05</div>
+        <!-- PROJECT 05 - CLICKABLE -->
 
-          <h3>Shock-Absorbing Trolley End Stop</h3>
+        <a href="projects/trolley-end-stop.html"
+           class="card project-link">
+
+          <div class="num">
+            PROJECT 05
+          </div>
+
+          <h3>
+            Shock-Absorbing Trolley End Stop
+          </h3>
 
           <p>
             Energy-absorbing end-stop concept developed to reduce abrupt
@@ -447,63 +523,88 @@
           </p>
 
           <span class="view-project">
-            View project &#8594;
+            View project →
           </span>
+
         </a>
 
 
-        <div class="card">
-          <div class="num">PROJECT 06</div>
+        <!-- PROJECT 06 -->
 
-          <h3>5 ft × 10 ft Sheet Flipper</h3>
+        <div class="card">
+
+          <div class="num">
+            PROJECT 06
+          </div>
+
+          <h3>
+            5 ft × 10 ft Sheet Flipper
+          </h3>
 
           <p>
             Modification of an existing handling fixture for larger
             stainless-steel sheet stock and controlled surface handling.
           </p>
+
         </div>
 
 
-        <div class="card">
-          <div class="num">PROJECT 07</div>
+        <!-- PROJECT 07 -->
 
-          <h3>Overhead Trolley Maintenance Catwalk</h3>
+        <div class="card">
+
+          <div class="num">
+            PROJECT 07
+          </div>
+
+          <h3>
+            Overhead Trolley Maintenance Catwalk
+          </h3>
 
           <p>
-            Permanent elevated access structure developed around an overhead
-            trolley system for inspection and maintenance.
+            Permanent elevated access structure developed around an
+            overhead trolley system for inspection and maintenance.
           </p>
+
         </div>
 
       </div>
-
     </div>
   </section>
 
 
+  <!-- ABOUT -->
+
   <section class="section" id="about">
+
     <div class="wrap about">
 
       <div>
-        <h2>Engineering Approach</h2>
+
+        <h2>
+          Engineering Approach
+        </h2>
 
         <p>
-          I focus on understanding the actual operating constraint, defining
-          the mechanical cause of the problem, and developing a durable
-          solution around the equipment, operator, manufacturing process, and
-          maintenance needs.
+          I focus on understanding the actual operating constraint,
+          defining the mechanical cause of the problem, and developing
+          a durable solution around the equipment, operator,
+          manufacturing process, and maintenance needs.
         </p>
 
         <p>
-          This site is a concise digital companion to my full engineering
-          portfolio.
+          This site is a concise digital companion to my full
+          engineering portfolio.
         </p>
+
       </div>
 
 
       <div class="skills">
 
-        <strong>Core capabilities</strong>
+        <strong>
+          Core capabilities
+        </strong>
 
         <ul>
           <li>Mechanical design and CAD integration</li>
@@ -520,20 +621,26 @@
   </section>
 
 
+  <!-- CONTACT -->
+
   <section class="section alt" id="contact">
+
     <div class="wrap">
 
-      <h2>Contact</h2>
+      <h2>
+        Contact
+      </h2>
 
       <p class="lead">
-        Mechanical Engineer based in Arizona. Contact information and
-        downloadable portfolio can be added here once the site structure is
-        published.
+        Mechanical Engineer based in Arizona.
       </p>
 
     </div>
+
   </section>
 
+
+  <!-- FOOTER -->
 
   <footer>
     <div class="wrap">
