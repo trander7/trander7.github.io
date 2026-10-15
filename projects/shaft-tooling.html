@@ -8,7 +8,6 @@
   <title>Damper Shaft Assembly Press Tooling | Tallon Anderson</title>
 
   <style>
-
     :root {
       --navy: #17354a;
       --blue: #236a8c;
@@ -24,10 +23,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -35,8 +30,6 @@
       background: var(--white);
       line-height: 1.6;
     }
-
-    /* HEADER */
 
     .site-header {
       background: var(--white);
@@ -71,8 +64,6 @@
       text-decoration: underline;
     }
 
-    /* HERO */
-
     .hero {
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
@@ -94,20 +85,18 @@
     }
 
     h1 {
-      max-width: 850px;
+      max-width: 900px;
       margin: 0 0 16px;
       font-size: clamp(34px, 5vw, 54px);
       line-height: 1.1;
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
     }
-
-    /* PAGE */
 
     main {
       max-width: 1050px;
@@ -131,11 +120,18 @@
       margin-top: 0;
     }
 
-    /* OVERVIEW */
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
 
     .summary {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.55fr 0.85fr;
       gap: 34px;
       margin-bottom: 42px;
     }
@@ -152,8 +148,6 @@
       font-weight: 600;
     }
 
-    /* CONTENT CARDS */
-
     .content-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -168,102 +162,116 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
+    .image-section {
+      margin: 48px 0;
     }
 
-    li {
-      margin-bottom: 9px;
+    .image-intro {
+      max-width: 850px;
+      color: var(--muted);
     }
 
-    /* PROCESS */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .image-card {
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .image-card h3 {
+      margin: 5px 2px 12px;
+    }
+
+    .image-card img {
+      display: block;
+      width: 100%;
+      height: 420px;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 4px;
+    }
+
+    .caption {
+      margin: 10px 2px 2px;
+      color: var(--muted);
+      font-size: 13px;
+    }
 
     .process-section {
       margin: 48px 0;
     }
 
     .process-grid {
-      margin-top: 25px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
+      gap: 14px;
+      margin-top: 22px;
     }
 
     .process-item {
-      padding: 24px;
+      padding: 22px;
       background: var(--light-blue);
       border: 1px solid var(--border);
       border-radius: 6px;
     }
 
     .process-number {
-      display: block;
       color: var(--blue);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 700;
-      letter-spacing: .08em;
-      margin-bottom: 8px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
     }
 
     .process-item strong {
       display: block;
+      margin: 6px 0 5px;
       color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 8px;
     }
 
-    /* IMAGES */
-
-    .image-section {
-      margin: 48px 0;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
-    }
-
-    .image-placeholder {
-      min-height: 300px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--light-gray);
-      border: 2px dashed #aebbc4;
-      border-radius: 6px;
+    .process-item p {
+      margin: 0;
       color: var(--muted);
-      text-align: center;
+      font-size: 14px;
     }
 
-    .caption {
-      margin-top: 10px;
-      color: var(--muted);
-      font-size: 13px;
+    .result-section {
+      margin: 45px 0;
+      padding: 30px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
     }
 
-    /* SIGNIFICANCE */
+    .result-section p {
+      margin-bottom: 0;
+    }
 
-    .project-significance {
-      margin-top: 48px;
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
-
-    /* FOOTER */
 
     footer {
       padding: 30px 24px;
@@ -273,18 +281,23 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 750px) {
-
       .summary,
       .content-grid,
-      .image-grid,
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
       .process-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-significance ul {
+      .image-card img {
+        height: auto;
+        max-height: 650px;
+      }
+
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -297,13 +310,21 @@
       }
     }
 
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+    }
   </style>
 </head>
 
 
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -322,14 +343,12 @@
   </header>
 
 
-  <!-- HERO -->
-
   <section class="hero">
 
     <div class="hero-content">
 
       <p class="eyebrow">
-        Project 03 | Assembly Tooling & Manufacturing Support
+        Project 03 | Fixture Design &amp; Assembly Control
       </p>
 
       <h1>
@@ -337,9 +356,8 @@
       </h1>
 
       <p class="subtitle">
-        Dedicated tooling developed to improve control, alignment,
-        repeatability, and organization during recurring damper-shaft
-        assembly operations.
+        Dedicated tooling developed to improve alignment, support, and
+        repeatability during recurring damper shaft assembly operations.
       </p>
 
     </div>
@@ -347,37 +365,30 @@
   </section>
 
 
-  <!-- MAIN -->
-
   <main>
 
-
-    <!-- PROJECT OVERVIEW -->
 
     <section class="summary">
 
       <div>
 
-        <h2>
-          Project Overview
-        </h2>
+        <h2>Project Overview</h2>
 
         <p>
-          Developed dedicated tooling for installing seal assemblies,
-          bronze bearing carriers, and bearings onto damper drive and
-          idle shafts using a hydraulic press.
+          Developed dedicated tooling for installing seal assemblies, bronze
+          bearing carriers, and bearings onto damper drive and idle shafts.
         </p>
 
         <p>
-          The tooling provides stable support beneath the shaft and
-          component-specific press interfaces so axial installation
-          forces can be applied in a more controlled and repeatable manner.
+          The tooling supports the shaft beneath the hydraulic press and
+          provides component-specific interfaces for controlled axial loading
+          during the different stages of assembly.
         </p>
 
         <p>
-          Dedicated storage locations were incorporated at the point
-          of use so the required tooling remains visible, organized,
-          and readily available for recurring assembly operations.
+          Dedicated storage was also incorporated so the tooling required for
+          recurring assembly operations could remain organized and available
+          at the point of use.
         </p>
 
       </div>
@@ -385,14 +396,11 @@
 
       <aside class="impact-card">
 
-        <h3>
-          Impact
-        </h3>
+        <h3>Impact</h3>
 
         <p>
-          Improved assembly alignment, repeatability, tooling
-          organization, and control during recurring shaft-assembly
-          operations.
+          Improved alignment, repeatability, setup organization, and control
+          during recurring shaft-assembly operations.
         </p>
 
       </aside>
@@ -400,17 +408,15 @@
     </section>
 
 
-    <!-- PROBLEM / SOLUTION -->
-
     <section class="content-grid">
+
 
       <article class="content-card">
 
-        <h2>
-          Problem Addressed
-        </h2>
+        <h2>Problem Addressed</h2>
 
         <ul>
+
           <li>
             Components could become misaligned during installation
           </li>
@@ -420,14 +426,18 @@
           </li>
 
           <li>
-            Sensitive seal and bearing surfaces required controlled
-            loading interfaces
+            Different assembly stages required different tooling interfaces
           </li>
 
           <li>
-            Multiple assembly stages required different tooling
-            configurations
+            Sensitive seal and bearing surfaces required controlled contact
           </li>
+
+          <li>
+            Multiple pieces of tooling needed to remain organized and readily
+            available
+          </li>
+
         </ul>
 
       </article>
@@ -435,62 +445,112 @@
 
       <article class="content-card">
 
-        <h2>
-          Design Response
-        </h2>
+        <h2>Design Response</h2>
 
         <ul>
+
           <li>
-            Dedicated lower shaft-support tooling
+            Dedicated lower support for the damper shaft
           </li>
 
           <li>
-            Component-specific upper press interfaces
+            Component-specific press interfaces
           </li>
 
           <li>
-            Tooling developed for multiple stages of shaft assembly
+            Tooling developed for multiple assembly stages
           </li>
 
           <li>
-            Point-of-use storage for organization and visibility
+            Controlled axial loading through the hydraulic press
           </li>
+
+          <li>
+            Dedicated storage and organization for assembly tooling
+          </li>
+
         </ul>
 
       </article>
 
+
     </section>
 
 
-    <!-- ASSEMBLY APPROACH -->
+    <section class="image-section">
 
-    <section class="process-section">
+      <h2>Press Tooling &amp; Organization</h2>
 
-      <h2>
-        Tooling Approach
-      </h2>
-
-      <p>
-        The tooling system separates the support and pressing functions
-        so each assembly operation can use an interface appropriate for
-        the component being installed.
+      <p class="image-intro">
+        The tooling setup combines dedicated shaft support and press interfaces
+        with organized storage for the tools used during recurring damper shaft
+        assembly.
       </p>
 
 
+      <div class="image-grid">
+
+
+        <div class="image-card">
+
+          <h3>Assembly Press Setup</h3>
+
+          <img
+            src="shaft-tooling-press.jpg"
+            alt="Hydraulic press setup with dedicated tooling for damper shaft assembly"
+          >
+
+          <p class="caption">
+            Hydraulic press setup with dedicated tooling used to support the
+            shaft and control component installation.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <h3>Dedicated Tooling Storage</h3>
+
+          <img
+            src="shaft-tooling-storage.jpg"
+            alt="Dedicated organized storage for damper shaft assembly tooling"
+          >
+
+          <p class="caption">
+            Dedicated storage keeps the component-specific press tooling
+            organized, visible, and accessible at the point of use.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="process-section">
+
+      <h2>Assembly Approach</h2>
+
       <div class="process-grid">
+
 
         <div class="process-item">
 
           <span class="process-number">
-            01
+            Step 01
           </span>
 
           <strong>
             Support
           </strong>
 
-          The shaft is held vertically with dedicated lower tooling
-          beneath the hydraulic press.
+          <p>
+            Position and support the damper shaft beneath the hydraulic press
+            using the dedicated lower tooling.
+          </p>
 
         </div>
 
@@ -498,15 +558,17 @@
         <div class="process-item">
 
           <span class="process-number">
-            02
+            Step 02
           </span>
 
           <strong>
             Align
           </strong>
 
-          Component-specific tooling establishes a controlled interface
-          with the seal, carrier, or bearing being installed.
+          <p>
+            Use the appropriate component-specific interface to maintain
+            alignment during the applicable assembly operation.
+          </p>
 
         </div>
 
@@ -514,136 +576,103 @@
         <div class="process-item">
 
           <span class="process-number">
-            03
+            Step 03
           </span>
 
           <strong>
             Press
           </strong>
 
-          Axial force is applied through the dedicated tooling rather
-          than through improvised contact surfaces.
+          <p>
+            Apply controlled axial loading through the hydraulic press to
+            install the applicable shaft component.
+          </p>
 
         </div>
+
 
       </div>
 
     </section>
 
-
-    <!-- ENGINEERING / PRODUCTION -->
 
     <section class="content-grid">
 
+
       <article class="content-card">
 
-        <h2>
-          Engineering Considerations
-        </h2>
+        <h2>Assembly Control</h2>
 
-        <ul>
-          <li>Shaft alignment beneath the hydraulic press</li>
-          <li>Axial load transfer through the tooling</li>
-          <li>Protection of seals and bearing surfaces</li>
-          <li>Tool accessibility during assembly</li>
-          <li>Compatibility with multiple assembly stages</li>
-        </ul>
+        <p>
+          The dedicated tooling provides defined support and contact interfaces
+          instead of relying on improvised tooling for recurring assembly
+          operations. This helps maintain alignment while providing a controlled
+          load path during pressing.
+        </p>
 
       </article>
 
 
       <article class="content-card">
 
-        <h2>
-          Shop-Floor Integration
-        </h2>
+        <h2>Point-of-Use Organization</h2>
 
-        <ul>
-          <li>Dedicated tooling stored at the point of use</li>
-          <li>Labeled locations improve visual organization</li>
-          <li>Repeatable setup for recurring assemblies</li>
-          <li>Reduced reliance on improvised pressing methods</li>
-          <li>Clear separation between different tooling functions</li>
-        </ul>
+        <p>
+          Dedicated storage provides a defined location for the individual
+          tooling components used during the assembly process. The arrangement
+          improves visibility and access while helping keep the tooling together
+          between uses.
+        </p>
 
       </article>
+
 
     </section>
 
 
-    <!-- IMAGES -->
+    <section class="result-section">
 
-    <section class="image-section">
-
-      <h2>
-        Press Tooling & Organization
-      </h2>
+      <h2>Result</h2>
 
       <p>
-        The project combines the mechanical tooling itself with
-        point-of-use organization around the hydraulic press.
+        The completed setup provides a repeatable method for supporting damper
+        shafts and installing seals, bearing carriers, and bearings using
+        dedicated tooling rather than ad hoc assembly methods.
       </p>
-
-
-      <div class="image-grid">
-
-        <div>
-
-          <div class="image-placeholder">
-            Hydraulic press and shaft tooling photograph will go here.
-          </div>
-
-          <p class="caption">
-            Hydraulic press setup with dedicated tooling used during
-            damper-shaft assembly.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <div class="image-placeholder">
-            Tool storage and assembly tooling photograph will go here.
-          </div>
-
-          <p class="caption">
-            Dedicated component tooling organized at the point of use
-            for recurring assembly operations.
-          </p>
-
-        </div>
-
-      </div>
 
     </section>
 
 
-    <!-- PORTFOLIO SIGNIFICANCE -->
+    <section class="portfolio-significance">
 
-    <section class="project-significance">
-
-      <h2>
-        Portfolio Significance
-      </h2>
+      <h2>Portfolio Significance</h2>
 
       <ul>
+
         <li>
-          Designed production tooling around a recurring assembly process
+          Developed dedicated tooling for recurring shaft assemblies
         </li>
 
         <li>
-          Considered alignment, load transfer, and component protection
+          Improved support and alignment during pressing operations
         </li>
 
         <li>
-          Developed tooling for multiple assembly operations
+          Created component-specific tooling interfaces
         </li>
 
         <li>
-          Integrated mechanical design with practical shop-floor
-          organization
+          Addressed multiple stages of the shaft assembly process
         </li>
+
+        <li>
+          Incorporated organized point-of-use tooling storage
+        </li>
+
+        <li>
+          Demonstrates practical fixture design and manufacturing support
+        </li>
+
       </ul>
 
     </section>
@@ -651,8 +680,6 @@
 
   </main>
 
-
-  <!-- FOOTER -->
 
   <footer>
     Tallon Anderson | Mechanical Engineering Portfolio
