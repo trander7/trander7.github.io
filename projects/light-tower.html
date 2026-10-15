@@ -138,29 +138,6 @@
       margin-bottom: 6px;
     }
 
-    .content-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 24px;
-      margin-bottom: 42px;
-    }
-
-    .content-card {
-      padding: 28px;
-      background: var(--light-gray);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 9px;
-    }
-
     .scope-section {
       margin: 45px 0;
     }
@@ -187,6 +164,29 @@
       text-align: center;
     }
 
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .content-card {
+      padding: 28px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
     .image-section {
       margin: 48px 0;
     }
@@ -211,8 +211,15 @@
       border-radius: 4px;
     }
 
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
     .image-placeholder {
-      min-height: 360px;
+      min-height: 260px;
       padding: 40px;
       display: flex;
       align-items: center;
@@ -222,17 +229,6 @@
       border-radius: 6px;
       color: var(--muted);
       text-align: center;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 18px;
-    }
-
-    .image-grid .image-placeholder {
-      min-height: 260px;
     }
 
     .caption {
@@ -311,23 +307,30 @@
 
   <header class="site-header">
     <nav class="nav">
-      <a class="brand" href="../index.html">TALLON ANDERSON</a>
+
+      <a class="brand" href="../index.html">
+        TALLON ANDERSON
+      </a>
 
       <a class="back-link" href="../index.html#work">
         &#8592; Back to selected work
       </a>
+
     </nav>
   </header>
 
 
   <section class="hero">
+
     <div class="hero-content">
 
       <p class="eyebrow">
         Project 01 | New Product Development
       </p>
 
-      <h1>Night-Lite GR-Series Light Tower</h1>
+      <h1>
+        Night-Lite GR-Series Light Tower
+      </h1>
 
       <p class="subtitle">
         Lead mechanical design involvement in the development of a mobile
@@ -336,6 +339,7 @@
       </p>
 
     </div>
+
   </section>
 
 
@@ -344,6 +348,7 @@
     <section class="summary">
 
       <div>
+
         <h2>Project Overview</h2>
 
         <p>
@@ -362,16 +367,22 @@
           manufacturable product while considering component packaging,
           structural interfaces, assembly, and production requirements.
         </p>
+
       </div>
 
+
       <aside class="role-card">
+
         <h3>Role</h3>
 
         <p>
           <strong>Lead Design Engineer</strong>
         </p>
 
-        <p>Allmand / Briggs &amp; Stratton</p>
+        <p>
+          Allmand / Briggs &amp; Stratton
+        </p>
+
       </aside>
 
     </section>
@@ -388,19 +399,29 @@
 
       <div class="scope-grid">
 
-        <div class="scope-item">Frame</div>
+        <div class="scope-item">
+          Frame
+        </div>
 
-        <div class="scope-item">Tower</div>
+        <div class="scope-item">
+          Tower
+        </div>
 
-        <div class="scope-item">Enclosure</div>
+        <div class="scope-item">
+          Enclosure
+        </div>
 
-        <div class="scope-item">Control Box</div>
+        <div class="scope-item">
+          Control Box
+        </div>
 
         <div class="scope-item">
           Engine &amp; Generator Mounting
         </div>
 
-        <div class="scope-item">Shrouds</div>
+        <div class="scope-item">
+          Shrouds
+        </div>
 
       </div>
 
@@ -431,4 +452,150 @@
 
         <ul>
           <li>Component packaging and mechanical interfaces</li>
-    
+          <li>Structural load paths and equipment support</li>
+          <li>Manufacturability of fabricated and sheet-metal components</li>
+          <li>Assembly access and serviceability</li>
+          <li>Repeatable production and component fit-up</li>
+          <li>Integration of multiple subsystems into one product</li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Product Development</h2>
+
+      <div class="product-image">
+
+        <img
+          src="night-lite-gr-series.png"
+          alt="Night-Lite GR-Series mobile light tower"
+        >
+
+      </div>
+
+      <p class="caption">
+        Night-Lite GR-Series mobile light tower.
+      </p>
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Mechanical Design Development</h2>
+
+      <p>
+        Selected CAD views highlight the mechanical architecture,
+        structural assemblies, sheet-metal components, and equipment
+        integration developed as part of the overall product.
+      </p>
+
+      <div class="image-grid">
+
+        <div>
+
+          <div class="image-placeholder">
+            CAD assembly image will go here.
+          </div>
+
+          <p class="caption">
+            Overall CAD assembly and mechanical packaging.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="image-placeholder">
+            Detailed CAD or fabrication image will go here.
+          </div>
+
+          <p class="caption">
+            Detail view highlighting structural, enclosure, or mounting design.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>Manufacturing Focus</h2>
+
+        <p>
+          The mechanical design included fabricated structures, weldments,
+          sheet-metal components, equipment mounts, and assembly interfaces.
+          Design development considered how these components would be produced,
+          assembled, and supported in a manufacturing environment.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>System-Level Design</h2>
+
+        <p>
+          Work across multiple assemblies required coordination of geometry,
+          mounting interfaces, available packaging space, and interactions
+          between major mechanical systems within the finished product.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
+
+      <ul>
+        <li>
+          Lead design responsibility on a complete production product
+        </li>
+
+        <li>
+          Mechanical design spanning multiple major assemblies
+        </li>
+
+        <li>
+          Experience with weldments and sheet-metal design
+        </li>
+
+        <li>
+          Integration of equipment, structures, and enclosure systems
+        </li>
+
+        <li>
+          Design developed with manufacturing and assembly in mind
+        </li>
+
+        <li>
+          Broad product-level CAD and mechanical integration experience
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+
+</body>
+
+</html>
