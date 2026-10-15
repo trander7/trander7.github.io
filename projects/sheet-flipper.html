@@ -8,7 +8,6 @@
   <title>5 ft x 10 ft Sheet Flipper | Tallon Anderson</title>
 
   <style>
-
     :root {
       --navy: #17354a;
       --blue: #236a8c;
@@ -24,10 +23,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -35,8 +30,6 @@
       background: var(--white);
       line-height: 1.6;
     }
-
-    /* HEADER */
 
     .site-header {
       background: var(--white);
@@ -71,8 +64,6 @@
       text-decoration: underline;
     }
 
-    /* HERO */
-
     .hero {
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
@@ -101,13 +92,11 @@
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
     }
-
-    /* PAGE */
 
     main {
       max-width: 1050px;
@@ -131,11 +120,18 @@
       margin-top: 0;
     }
 
-    /* OVERVIEW */
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
 
     .summary {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.55fr 0.85fr;
       gap: 34px;
       margin-bottom: 42px;
     }
@@ -152,8 +148,6 @@
       font-weight: 600;
     }
 
-    /* CONTENT */
-
     .content-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -168,74 +162,28 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 9px;
-    }
-
-    /* DESIGN FLOW */
-
-    .process-section {
-      margin: 48px 0;
-    }
-
-    .process-grid {
-      margin-top: 25px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .process-item {
-      padding: 24px;
-      background: var(--light-blue);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .process-number {
-      display: block;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: .08em;
-      margin-bottom: 8px;
-    }
-
-    .process-item strong {
-      display: block;
-      color: var(--navy);
-      font-size: 18px;
-      margin-bottom: 8px;
-    }
-
-    /* IMAGES */
-
     .image-section {
       margin: 48px 0;
     }
 
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 22px;
+    .project-image {
+      width: 100%;
+      padding: 20px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: center;
     }
 
-    .image-placeholder {
-      min-height: 300px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--light-gray);
-      border: 2px dashed #aebbc4;
-      border-radius: 6px;
-      color: var(--muted);
-      text-align: center;
+    .project-image img {
+      display: block;
+      width: 100%;
+      max-width: 900px;
+      max-height: 700px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 4px;
     }
 
     .caption {
@@ -244,26 +192,52 @@
       font-size: 13px;
     }
 
-    /* SIGNIFICANCE */
+    .benefits-section {
+      margin: 48px 0;
+    }
 
-    .project-significance {
-      margin-top: 48px;
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .benefit {
+      padding: 22px;
+      background: var(--light-blue);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .benefit strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--navy);
+    }
+
+    .benefit p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
-
-    /* FOOTER */
 
     footer {
       padding: 30px 24px;
@@ -273,18 +247,14 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 750px) {
-
       .summary,
       .content-grid,
-      .image-grid,
-      .process-grid {
+      .benefit-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-significance ul {
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -295,16 +265,23 @@
       main {
         padding-top: 40px;
       }
-
     }
 
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+    }
   </style>
 </head>
 
 
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -323,24 +300,22 @@
   </header>
 
 
-  <!-- HERO -->
-
   <section class="hero">
 
     <div class="hero-content">
 
       <p class="eyebrow">
-        Project 06 | Material Handling & Process Improvement
+        Project 06 | Material Handling &amp; Surface Protection
       </p>
 
       <h1>
-        5 ft × 10 ft Sheet Flipper
+        5 ft x 10 ft Sheet Flipper Modification
       </h1>
 
       <p class="subtitle">
-        Modification of an existing material-handling fixture to
-        accommodate larger stainless-steel sheet stock while maintaining
-        controlled handling of the designated finished surface.
+        Modification of an existing sheet-handling fixture to accommodate
+        larger stainless-steel sheets while improving control during material
+        handling and laser-loading operations.
       </p>
 
     </div>
@@ -348,37 +323,31 @@
   </section>
 
 
-  <!-- MAIN -->
-
   <main>
 
-
-    <!-- OVERVIEW -->
 
     <section class="summary">
 
       <div>
 
-        <h2>
-          Project Overview
-        </h2>
+        <h2>Project Overview</h2>
 
         <p>
-          Modified an existing sheet-flipping fixture originally configured
-          for 5 ft × 8 ft sheet stock so it could accommodate 5 ft × 10 ft
-          stainless-steel sheets.
+          Modified an existing sheet-flipping fixture that was originally
+          designed for 5 ft x 8 ft sheets so it could accommodate 5 ft x 10 ft
+          stainless-steel sheet stock.
         </p>
 
         <p>
-          The fixture provides a controlled method for reorienting large
-          sheets before laser loading while limiting unnecessary handling
-          of the designated finished surface.
+          The fixture provides a controlled method for flipping large sheets
+          before laser loading, allowing the shop to control which surface of
+          the stainless sheet is exposed during subsequent handling.
         </p>
 
         <p>
-          Rather than replacing the existing equipment with an entirely
-          new concept, the proven fixture arrangement was adapted for the
-          larger sheet format.
+          The modification extended the capability of an existing piece of
+          material-handling equipment rather than requiring a completely new
+          fixture.
         </p>
 
       </div>
@@ -386,14 +355,11 @@
 
       <aside class="impact-card">
 
-        <h3>
-          Impact
-        </h3>
+        <h3>Impact</h3>
 
         <p>
-          Expanded the shop's sheet-handling capability while supporting
-          controlled handling of larger stainless-steel sheets prior to
-          laser cutting.
+          Expanded sheet-handling capability while supporting surface-quality
+          control before laser cutting.
         </p>
 
       </aside>
@@ -401,32 +367,31 @@
     </section>
 
 
-    <!-- PROBLEM / DESIGN -->
-
     <section class="content-grid">
 
+
       <article class="content-card">
 
-        <h2>
-          Problem Addressed
-        </h2>
+        <h2>Problem Addressed</h2>
 
         <ul>
+
           <li>
-            Existing fixture was configured for smaller 5 ft × 8 ft sheets
+            Existing fixture was configured for 5 ft x 8 ft sheet stock
           </li>
 
           <li>
-            Production required handling of 5 ft × 10 ft stainless-steel sheets
+            Production needed to handle larger 5 ft x 10 ft stainless sheets
           </li>
 
           <li>
-            Large sheets required controlled support during reorientation
+            Large sheets required controlled handling during flipping
           </li>
 
           <li>
-            Finished surfaces needed to be protected during handling
+            Surface condition needed to be considered during material handling
           </li>
+
         </ul>
 
       </article>
@@ -434,213 +399,188 @@
 
       <article class="content-card">
 
-        <h2>
-          Design Response
-        </h2>
+        <h2>Design Response</h2>
 
         <ul>
+
           <li>
-            Extended the existing fixture concept for 5 ft × 10 ft material
+            Modified the existing fixture for 5 ft x 10 ft sheet compatibility
           </li>
 
           <li>
-            Maintained the established controlled flipping method
+            Retained the basic concept of the existing sheet-flipping equipment
           </li>
 
           <li>
-            Preserved support of the sheet during reorientation
+            Provided support appropriate for the larger sheet format
           </li>
 
           <li>
-            Adapted existing equipment rather than developing a completely
-            new handling system
+            Maintained a controlled method for flipping and positioning sheets
           </li>
+
         </ul>
 
       </article>
+
 
     </section>
 
-
-    <!-- OPERATION -->
-
-    <section class="process-section">
-
-      <h2>
-        Handling Concept
-      </h2>
-
-      <p>
-        The fixture provides a controlled sequence for managing large
-        sheet stock while preparing the material for downstream processing.
-      </p>
-
-
-      <div class="process-grid">
-
-        <div class="process-item">
-
-          <span class="process-number">
-            01
-          </span>
-
-          <strong>
-            Load
-          </strong>
-
-          Large stainless-steel sheet stock is positioned within the
-          support fixture.
-
-        </div>
-
-
-        <div class="process-item">
-
-          <span class="process-number">
-            02
-          </span>
-
-          <strong>
-            Reorient
-          </strong>
-
-          The fixture controls the sheet while the material is flipped
-          to the required orientation.
-
-        </div>
-
-
-        <div class="process-item">
-
-          <span class="process-number">
-            03
-          </span>
-
-          <strong>
-            Transfer
-          </strong>
-
-          The correctly oriented sheet can then be prepared for loading
-          into the laser-cutting process.
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONSIDERATIONS -->
-
-    <section class="content-grid">
-
-      <article class="content-card">
-
-        <h2>
-          Engineering Considerations
-        </h2>
-
-        <ul>
-          <li>Overall 5 ft × 10 ft sheet dimensions</li>
-          <li>Support across the larger sheet area</li>
-          <li>Fixture stability during reorientation</li>
-          <li>Material clearance through the flipping motion</li>
-          <li>Protection of finished stainless-steel surfaces</li>
-        </ul>
-
-      </article>
-
-
-      <article class="content-card">
-
-        <h2>
-          Production Value
-        </h2>
-
-        <ul>
-          <li>Accommodated larger sheet stock</li>
-          <li>Reused an existing proven fixture concept</li>
-          <li>Improved control during sheet handling</li>
-          <li>Supported surface-quality requirements</li>
-          <li>Avoided unnecessary replacement of existing equipment</li>
-        </ul>
-
-      </article>
-
-    </section>
-
-
-    <!-- IMAGES -->
 
     <section class="image-section">
 
-      <h2>
-        Fixture Development
-      </h2>
+      <h2>Modified Sheet Flipper</h2>
 
-      <p>
-        The final project page will show the physical modified fixture
-        together with the corresponding CAD model.
+      <div class="project-image">
+
+        <img
+          src="sheet-flipper.jpg"
+          alt="Modified fixture for flipping 5 foot by 10 foot stainless-steel sheets"
+        >
+
+      </div>
+
+      <p class="caption">
+        Modified sheet flipper configured for 5 ft x 10 ft stainless-steel
+        sheet stock.
       </p>
 
+    </section>
 
-      <div class="image-grid">
 
-        <div>
+    <section class="benefits-section">
 
-          <div class="image-placeholder">
-            Sheet flipper photograph will go here.
-          </div>
+      <h2>Production Benefits</h2>
 
-          <p class="caption">
-            Modified material-handling fixture configured for
-            5 ft × 10 ft stainless-steel sheets.
+      <div class="benefit-grid">
+
+
+        <div class="benefit">
+
+          <strong>
+            Larger Sheet Capability
+          </strong>
+
+          <p>
+            Extended the fixture from its original 5 ft x 8 ft application to
+            accommodate 5 ft x 10 ft sheet stock.
           </p>
 
         </div>
 
 
-        <div>
+        <div class="benefit">
 
-          <div class="image-placeholder">
-            Sheet flipper CAD model will go here.
-          </div>
+          <strong>
+            Surface Control
+          </strong>
 
-          <p class="caption">
-            CAD model showing the modified fixture configuration.
+          <p>
+            Provides greater control over which sheet surface is exposed during
+            handling and preparation for laser loading.
           </p>
 
         </div>
+
+
+        <div class="benefit">
+
+          <strong>
+            Controlled Handling
+          </strong>
+
+          <p>
+            Provides a dedicated method for flipping large stainless-steel
+            sheets rather than relying on less controlled material-handling
+            methods.
+          </p>
+
+        </div>
+
+
+        <div class="benefit">
+
+          <strong>
+            Existing Equipment Improved
+          </strong>
+
+          <p>
+            Expanded the capability of an existing fixture instead of replacing
+            the established equipment concept.
+          </p>
+
+        </div>
+
 
       </div>
 
     </section>
 
 
-    <!-- SIGNIFICANCE -->
+    <section class="content-grid">
 
-    <section class="project-significance">
 
-      <h2>
-        Portfolio Significance
-      </h2>
+      <article class="content-card">
+
+        <h2>Manufacturing Focus</h2>
+
+        <p>
+          The project focused on adapting an existing shop-floor tool to a new
+          production requirement. The modification allowed larger sheet stock
+          to be handled while preserving the functionality of the original
+          fixture concept.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Design Intent</h2>
+
+        <p>
+          The objective was to create a practical modification rather than
+          unnecessarily replace a working fixture. The resulting equipment
+          supports the larger sheet format while providing a repeatable method
+          for flipping stainless-steel material.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
 
       <ul>
+
         <li>
-          Modified existing production equipment for a new material size
+          Modified existing equipment for a new production requirement
         </li>
 
         <li>
-          Considered both material handling and finished-surface protection
+          Expanded compatibility from 5 ft x 8 ft to 5 ft x 10 ft sheets
         </li>
 
         <li>
-          Applied mechanical design to an active shop-floor process
+          Addressed handling requirements for large stainless-steel material
         </li>
 
         <li>
-          Extended the usefulness of existing equipment rather than
-          replacing the entire system
+          Supported better control of finished sheet surfaces
         </li>
+
+        <li>
+          Extended an existing equipment concept rather than replacing it
+        </li>
+
+        <li>
+          Demonstrates practical manufacturing and material-handling design
+        </li>
+
       </ul>
 
     </section>
@@ -648,8 +588,6 @@
 
   </main>
 
-
-  <!-- FOOTER -->
 
   <footer>
     Tallon Anderson | Mechanical Engineering Portfolio
