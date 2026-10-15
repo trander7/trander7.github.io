@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Overhead Trolley Maintenance Catwalk | Tallon Anderson</title>
+  <title>Angle Ring Stitch-Weld Templates | Tallon Anderson</title>
 
   <style>
     :root {
@@ -65,9 +65,9 @@
     }
 
     .hero {
-      padding: 70px 24px;
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
+      padding: 70px 24px;
     }
 
     .hero-content {
@@ -92,7 +92,7 @@
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
@@ -122,7 +122,7 @@
 
     .summary {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.55fr 0.85fr;
       gap: 34px;
       margin-bottom: 42px;
     }
@@ -162,85 +162,27 @@
       margin-bottom: 9px;
     }
 
-    .feature-section {
-      margin: 48px 0;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .feature-item {
-      padding: 24px;
-      background: var(--light-blue);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .feature-number {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .feature-item strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-size: 18px;
-    }
-
     .image-section {
       margin: 48px 0;
     }
 
-    .main-image {
-      width: 100%;
-      padding: 16px;
-      background: var(--light-gray);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .main-image img {
-      display: block;
-      width: 100%;
-      max-width: 950px;
-      max-height: 700px;
-      height: auto;
-      margin: 0 auto;
-      object-fit: contain;
-      border-radius: 4px;
-    }
-
-    .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 28px;
-    }
-
     .project-image {
       width: 100%;
-      padding: 12px;
+      padding: 24px;
       background: var(--light-gray);
       border: 1px solid var(--border);
       border-radius: 6px;
+      text-align: center;
     }
 
     .project-image img {
       display: block;
       width: 100%;
-      height: 360px;
+      max-width: 850px;
+      max-height: 700px;
+      height: auto;
       margin: 0 auto;
       object-fit: contain;
-      background: var(--white);
       border-radius: 4px;
     }
 
@@ -250,19 +192,57 @@
       font-size: 13px;
     }
 
-    .project-significance {
-      margin-top: 48px;
+    .process-section {
+      margin: 48px 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .process-item {
+      padding: 22px;
+      background: var(--light-blue);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .process-number {
+      color: var(--blue);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .process-item strong {
+      display: block;
+      margin: 6px 0 5px;
+      color: var(--navy);
+    }
+
+    .process-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
@@ -277,18 +257,15 @@
 
     @media (max-width: 750px) {
       .summary,
-      .content-grid,
-      .feature-grid,
-      .image-grid {
+      .content-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-image img {
-        height: auto;
-        max-height: 600px;
+      .process-grid {
+        grid-template-columns: 1fr;
       }
 
-      .project-significance ul {
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -310,14 +287,10 @@
       .back-link {
         text-align: right;
       }
-
-      .main-image,
-      .project-image {
-        padding: 7px;
-      }
     }
   </style>
 </head>
+
 
 <body>
 
@@ -343,17 +316,16 @@
     <div class="hero-content">
 
       <p class="eyebrow">
-        Project 07 | Structural Integration &amp; Maintenance Access
+        Project 02 | Manufacturing Tooling &amp; Process Improvement
       </p>
 
       <h1>
-        Overhead Trolley Maintenance Catwalk
+        Angle Ring Stitch-Weld Templates
       </h1>
 
       <p class="subtitle">
-        Elevated access structure developed around an overhead trolley
-        network to improve access for inspection, service, and equipment
-        maintenance.
+        Reusable layout templates developed to establish consistent weld
+        quantity and stitch spacing for angle-ring attachment to round ductwork.
       </p>
 
     </div>
@@ -363,6 +335,7 @@
 
   <main>
 
+
     <section class="summary">
 
       <div>
@@ -370,21 +343,16 @@
         <h2>Project Overview</h2>
 
         <p>
-          Designed a mezzanine-style catwalk to provide elevated access
-          to overhead trolleys serving the coating and oven areas.
+          Designed reusable layout templates for attaching angle rings to round
+          ductwork. Each template corresponds to applicable duct and angle-ring
+          sizes and provides a repeatable guide for weld quantity and stitch
+          spacing.
         </p>
 
         <p>
-          The structure incorporated stairs, guardrails, framing, bracing,
-          and an elevated working platform positioned around the existing
-          trolley system.
-        </p>
-
-        <p>
-          Although the original process requirement that initiated the
-          project was later eliminated, the completed structure remained
-          useful as dedicated maintenance access for the overhead trolley
-          equipment.
+          Instead of laying out every weld location individually with a tape
+          measure, fabricators can use the template to transfer the required
+          stitch locations directly to the assembly.
         </p>
 
       </div>
@@ -395,8 +363,8 @@
         <h3>Impact</h3>
 
         <p>
-          Improved access to the overhead trolley system for inspection,
-          component replacement, and recurring maintenance activities.
+          Faster layout, more uniform stitch spacing, improved repeatability,
+          and reduced potential for measurement error.
         </p>
 
       </aside>
@@ -406,23 +374,218 @@
 
     <section class="content-grid">
 
+
+      <article class="content-card">
+
+        <h2>Problem Addressed</h2>
+
+        <ul>
+          <li>Repeated manual layout of weld locations</li>
+
+          <li>
+            Time required to measure stitch spacing for recurring duct sizes
+          </li>
+
+          <li>
+            Potential variation between individual fabrication setups
+          </li>
+
+          <li>
+            Need for a repeatable method that could be used directly on the
+            shop floor
+          </li>
+        </ul>
+
+      </article>
+
+
       <article class="content-card">
 
         <h2>Design Response</h2>
 
         <ul>
+          <li>Reusable size-based template system</li>
+
           <li>
-            Fixed elevated platform positioned beneath and alongside
-            the overhead trolley system
+            Predefined stitch locations and spacing
           </li>
 
           <li>
-            Integrated stair access to the elevated work area
+            Quick fit-up to the applicable duct and angle ring
           </li>
 
           <li>
-            Guardrails incorporated around exposed platform edges
+            Consistent layout method for repeat assemblies
           </li>
+        </ul>
 
-          <li>
-            Structural framing and bracing
+      </article>
+
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Weld-Layout Template</h2>
+
+      <div class="project-image">
+
+        <img
+          src="angle-ring-weld-template.jpg"
+          alt="Circular angle-ring weld-layout template used for repeatable weld location layout"
+        >
+
+      </div>
+
+      <p class="caption">
+        Reusable layout template used to establish consistent weld quantity
+        and stitch spacing for angle-ring attachment.
+      </p>
+
+    </section>
+
+
+    <section class="process-section">
+
+      <h2>Shop-Floor Use</h2>
+
+      <div class="process-grid">
+
+        <div class="process-item">
+
+          <span class="process-number">
+            Step 01
+          </span>
+
+          <strong>
+            Select Template
+          </strong>
+
+          <p>
+            Use the template corresponding to the applicable duct and
+            angle-ring size.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <span class="process-number">
+            Step 02
+          </span>
+
+          <strong>
+            Establish Weld Locations
+          </strong>
+
+          <p>
+            Use the predefined template locations to transfer the stitch-weld
+            layout to the assembly.
+          </p>
+
+        </div>
+
+
+        <div class="process-item">
+
+          <span class="process-number">
+            Step 03
+          </span>
+
+          <strong>
+            Repeat Consistently
+          </strong>
+
+          <p>
+            Reuse the same layout method on recurring assemblies rather than
+            measuring each weld pattern individually.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+
+      <article class="content-card">
+
+        <h2>Manufacturing Focus</h2>
+
+        <p>
+          The template converts a recurring manual measurement task into a
+          reusable physical layout method. The design emphasizes practical
+          shop-floor use, repeatability, and straightforward application by
+          fabricators.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Design Intent</h2>
+
+        <p>
+          The objective was not to add complexity to the fabrication process,
+          but to simplify a repetitive layout operation by building the
+          required weld pattern into a reusable tool.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
+
+      <ul>
+
+        <li>
+          Identified a repetitive manufacturing task suitable for tooling
+        </li>
+
+        <li>
+          Developed a reusable physical layout system
+        </li>
+
+        <li>
+          Improved consistency across recurring fabrication work
+        </li>
+
+        <li>
+          Reduced reliance on repeated manual measurement
+        </li>
+
+        <li>
+          Designed around direct shop-floor use
+        </li>
+
+        <li>
+          Demonstrates practical manufacturing process improvement
+        </li>
+
+      </ul>
+
+    </section>
+
+
+  </main>
+
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+
+
+</body>
+
+</html>
