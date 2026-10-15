@@ -23,10 +23,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -34,8 +30,6 @@
       background: var(--white);
       line-height: 1.6;
     }
-
-    /* HEADER */
 
     .site-header {
       background: var(--white);
@@ -70,12 +64,10 @@
       text-decoration: underline;
     }
 
-    /* HERO */
-
     .hero {
+      padding: 70px 24px;
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
-      padding: 70px 24px;
     }
 
     .hero-content {
@@ -106,8 +98,6 @@
       font-size: 18px;
     }
 
-    /* MAIN */
-
     main {
       max-width: 1050px;
       margin: 0 auto;
@@ -130,8 +120,6 @@
       margin-top: 0;
     }
 
-    /* OVERVIEW */
-
     .summary {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
@@ -150,8 +138,6 @@
       margin-bottom: 0;
       font-weight: 600;
     }
-
-    /* CONTENT */
 
     .content-grid {
       display: grid;
@@ -176,8 +162,6 @@
       margin-bottom: 9px;
     }
 
-    /* PROCESS */
-
     .process-section {
       margin: 48px 0;
     }
@@ -197,37 +181,42 @@
     }
 
     .process-number {
+      margin-bottom: 7px;
       color: var(--blue);
       font-size: 13px;
       font-weight: 700;
       letter-spacing: 0.08em;
-      margin-bottom: 7px;
     }
 
     .process-item strong {
       display: block;
+      margin-bottom: 8px;
       color: var(--navy);
       font-size: 17px;
-      margin-bottom: 8px;
     }
-
-    /* IMAGE */
 
     .image-section {
       margin: 48px 0;
     }
 
-    .image-placeholder {
-      min-height: 360px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .project-image {
+      width: 100%;
+      padding: 18px;
       background: var(--light-gray);
-      border: 2px dashed #aebbc4;
+      border: 1px solid var(--border);
       border-radius: 6px;
-      color: var(--muted);
       text-align: center;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      max-width: 850px;
+      max-height: 760px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 4px;
     }
 
     .caption {
@@ -235,8 +224,6 @@
       color: var(--muted);
       font-size: 13px;
     }
-
-    /* SIGNIFICANCE */
 
     .project-significance {
       margin-top: 48px;
@@ -255,8 +242,6 @@
       column-gap: 50px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 30px 24px;
       background: var(--light-gray);
@@ -265,10 +250,7 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 750px) {
-
       .summary,
       .content-grid,
       .process-grid {
@@ -288,13 +270,24 @@
       }
     }
 
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+
+      .project-image {
+        padding: 8px;
+      }
+    }
   </style>
 </head>
 
-
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -312,8 +305,6 @@
 
   </header>
 
-
-  <!-- HERO -->
 
   <section class="hero">
 
@@ -338,20 +329,13 @@
   </section>
 
 
-  <!-- MAIN CONTENT -->
-
   <main>
-
-
-    <!-- OVERVIEW -->
 
     <section class="summary">
 
       <div>
 
-        <h2>
-          Project Overview
-        </h2>
+        <h2>Project Overview</h2>
 
         <p>
           Designed reusable layout templates for attaching angle rings to
@@ -366,8 +350,8 @@
 
         <p>
           Fabricators can transfer the required locations directly from the
-          template instead of laying out each stitch individually with a
-          tape measure.
+          template instead of separately laying out each stitch location with
+          a tape measure.
         </p>
 
       </div>
@@ -375,9 +359,7 @@
 
       <aside class="impact-card">
 
-        <h3>
-          Impact
-        </h3>
+        <h3>Impact</h3>
 
         <p>
           Faster layout, more consistent stitch spacing, improved
@@ -390,32 +372,17 @@
     </section>
 
 
-    <!-- PROBLEM / RESPONSE -->
-
     <section class="content-grid">
 
       <article class="content-card">
 
-        <h2>
-          Problem Addressed
-        </h2>
+        <h2>Problem Addressed</h2>
 
         <ul>
-          <li>
-            Weld locations required repeated manual layout
-          </li>
-
-          <li>
-            Layout depended on measuring around each duct and angle ring
-          </li>
-
-          <li>
-            Repetitive measurement created opportunities for variation
-          </li>
-
-          <li>
-            Similar assemblies required the same layout process repeatedly
-          </li>
+          <li>Weld locations required repeated manual layout</li>
+          <li>Layout depended on measuring around each duct and angle ring</li>
+          <li>Repetitive measurement created opportunities for variation</li>
+          <li>Similar assemblies required the same layout process repeatedly</li>
         </ul>
 
       </article>
@@ -423,26 +390,13 @@
 
       <article class="content-card">
 
-        <h2>
-          Design Response
-        </h2>
+        <h2>Design Response</h2>
 
         <ul>
-          <li>
-            Reusable, size-specific template system
-          </li>
-
-          <li>
-            Predefined stitch-weld locations and spacing
-          </li>
-
-          <li>
-            Quick fit-up to the corresponding duct and angle-ring size
-          </li>
-
-          <li>
-            Simple visual layout method for repeat fabrication
-          </li>
+          <li>Reusable, size-specific template system</li>
+          <li>Predefined stitch-weld locations and spacing</li>
+          <li>Quick fit-up to the corresponding duct and angle-ring size</li>
+          <li>Simple visual layout method for repeat fabrication</li>
         </ul>
 
       </article>
@@ -450,19 +404,14 @@
     </section>
 
 
-    <!-- PROCESS -->
-
     <section class="process-section">
 
-      <h2>
-        Shop-Floor Workflow
-      </h2>
+      <h2>Shop-Floor Workflow</h2>
 
       <p>
         The tooling converts a repeated measuring task into a simple,
         repeatable transfer process.
       </p>
-
 
       <div class="process-grid">
 
@@ -517,15 +466,11 @@
     </section>
 
 
-    <!-- ENGINEERING / PRODUCTION -->
-
     <section class="content-grid">
 
       <article class="content-card">
 
-        <h2>
-          Engineering Considerations
-        </h2>
+        <h2>Engineering Considerations</h2>
 
         <ul>
           <li>Applicable duct and angle-ring sizes</li>
@@ -540,9 +485,7 @@
 
       <article class="content-card">
 
-        <h2>
-          Production Value
-        </h2>
+        <h2>Production Value</h2>
 
         <ul>
           <li>Reduced repetitive measuring</li>
@@ -557,25 +500,59 @@
     </section>
 
 
-    <!-- IMAGE PLACEHOLDER -->
-
     <section class="image-section">
 
-      <h2>
-        Template Design
-      </h2>
+      <h2>Weld-Layout Template</h2>
 
-      <p>
-        The finished page will use the existing project image to show how
-        the physical template establishes weld quantity and stitch spacing.
-      </p>
+      <div class="project-image">
 
-
-      <div class="image-placeholder">
-
-        Angle-ring stitch-weld template photograph will go here.
+        <img
+          src="angle-ring-weld-template.jpg"
+          alt="Circular angle-ring weld-layout template mounted in a fabrication fixture"
+        >
 
       </div>
 
+      <p class="caption">
+        Reusable circular layout template with predefined holes and markings
+        for establishing weld quantity and stitch locations across multiple
+        duct and angle-ring sizes.
+      </p>
 
-      <p 
+    </section>
+
+
+    <section class="project-significance">
+
+      <h2>Portfolio Significance</h2>
+
+      <ul>
+        <li>
+          Converted a repetitive manual layout process into reusable tooling
+        </li>
+
+        <li>
+          Designed around the actual fabrication workflow
+        </li>
+
+        <li>
+          Improved repeatability without introducing complex equipment
+        </li>
+
+        <li>
+          Demonstrates practical design-for-manufacturing problem solving
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+
+</body>
+
+</html>
