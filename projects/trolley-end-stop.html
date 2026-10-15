@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Shock-Absorbing Trolley End Stop | Tallon Anderson</title>
+
+  <style>
+    :root {
+      --navy: #17354a;
+      --blue: #236a8c;
+      --light-blue: #eef4f7;
+      --light-gray: #f5f7f8;
+      --border: #d8e0e5;
+      --text: #25313a;
+      --muted: #62717c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #142f44, #275b74);
+      color: var(--white);
+      padding: 70px 24px;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #70c3e4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 760px;
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 0;
+      color: #dceaf0;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 55px 24px 80px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 34px;
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .impact-card {
+      padding: 26px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .impact-card p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .content-card {
+      padding: 28px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .image-section {
+      margin: 45px 0;
+    }
+
+    .image-placeholder {
+      min-height: 340px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gray);
+      border: 2px dashed #aebbc4;
+      border-radius: 6px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .project-significance {
+      padding: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+    }
+
+    .project-significance h2 {
+      color: var(--white);
+    }
+
+    .project-significance ul {
+      columns: 2;
+      column-gap: 50px;
+    }
+
+    footer {
+      padding: 30px 24px;
+      background: var(--light-gray);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .summary,
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-significance ul {
+        columns: 1;
+      }
+
+      .hero {
+        padding: 52px 24px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html">TALLON ANDERSON</a>
+      <a class="back-link" href="../index.html">&#8592; Back to selected work</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Project 05 | Equipment Protection</p>
+      <h1>Shock-Absorbing Trolley End Stop</h1>
+      <p class="subtitle">
+        Integration of an industrial shock absorber into an overhead
+        trolley-track end stop to reduce abrupt impact loading and protect
+        trolley components.
+      </p>
+    </div>
+  </section>
+
+  <main>
+    <section class="summary">
+      <div>
+        <h2>Project Overview</h2>
+        <p>
+          Developed a shock-absorbing end-stop concept for overhead trolleys
+          traveling on an I-beam track. If a manually positioned track switch
+          is not changed, a loaded trolley can contact a rigid end stop and
+          create an abrupt impact.
+        </p>
+        <p>
+          The design introduces a controlled deceleration stroke while retaining
+          a positive mechanical stop behind the shock absorber.
+        </p>
+      </div>
+
+      <aside class="impact-card">
+        <h3>Impact</h3>
+        <p>
+          Increased stopping distance, reduced peak impact loading, and lower
+          risk of damage to trolley components.
+        </p>
+      </aside>
+    </section>
+
+    <section class="content-grid">
+      <article class="content-card">
+        <h2>Design Response</h2>
+        <ul>
+          <li>Industrial shock absorber aligned with trolley travel</li>
+          <li>Structural mount transferring reaction into the support frame</li>
+          <li>Dedicated contact surface for controlled engagement</li>
+          <li>Positive mechanical stop retained behind the absorber</li>
+        </ul>
+      </article>
+
+      <article class="content-card">
+        <h2>Engineering Basis</h2>
+        <p>
+          The design uses additional stopping distance to dissipate trolley
+          kinetic energy over a controlled stroke.
+        </p>
+        <p>
+          Selection and validation depend on moving mass, impact velocity,
+          usable stroke, allowable force, impact frequency, and rated energy
+          capacity.
+        </p>
+      </article>
+    </section>
+
+    <section class="image-section">
+      <h2>Design Development</h2>
+
+      <div class="image-placeholder">
+        Add the trolley end-stop CAD image here after the page is working.
+      </div>
+
+      <p class="caption">
+        CAD development showing the trolley, track, structural support,
+        contact surface, and shock-absorber arrangement.
+      </p>
+    </section>
+
+    <section class="project-significance">
+      <h2>Portfolio Significance</h2>
+      <ul>
+        <li>Identified a recurring equipment-damage mechanism</li>
+        <li>Developed a passive equipment-protection concept</li>
+        <li>Integrated new hardware with an existing trolley and track system</li>
+        <li>Used CAD to review interfaces, alignment, and mounting geometry</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+</body>
+</html>
