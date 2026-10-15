@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Forklift-Mounted Large-Duct Support Saddle | Tallon Anderson</title>
+
+  <style>
+
+    :root {
+      --navy: #17354a;
+      --blue: #236a8c;
+      --light-blue: #eef4f7;
+      --light-gray: #f5f7f8;
+      --border: #d8e0e5;
+      --text: #25313a;
+      --muted: #62717c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #142f44, #275b74);
+      color: var(--white);
+      padding: 70px 24px;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #70c3e4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: #dceaf0;
+      font-size: 18px;
+    }
+
+    /* PAGE */
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 55px 24px 80px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    /* OVERVIEW */
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 34px;
+      margin-bottom: 42px;
+    }
+
+    .impact-card {
+      padding: 26px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .impact-card p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    /* CONTENT CARDS */
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .content-card {
+      padding: 28px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    /* MODULAR DESIGN */
+
+    .modular-section {
+      margin: 48px 0;
+    }
+
+    .modular-flow {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: 1fr 70px 1fr;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .module {
+      padding: 28px;
+      background: var(--light-blue);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    .module strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .plus {
+      color: var(--blue);
+      font-size: 35px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    /* IMAGES */
+
+    .image-section {
+      margin: 48px 0;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .image-placeholder {
+      min-height: 300px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gray);
+      border: 2px dashed #aebbc4;
+      border-radius: 6px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* SIGNIFICANCE */
+
+    .project-significance {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+    }
+
+    .project-significance h2 {
+      color: var(--white);
+    }
+
+    .project-significance ul {
+      columns: 2;
+      column-gap: 50px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 24px;
+      background: var(--light-gray);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .summary,
+      .content-grid,
+      .image-grid,
+      .modular-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .plus {
+        transform: rotate(0deg);
+      }
+
+      .project-significance ul {
+        columns: 1;
+      }
+
+      .hero {
+        padding: 52px 24px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a class="brand" href="../index.html">
+        TALLON ANDERSON
+      </a>
+
+      <a class="back-link" href="../index.html#work">
+        &#8592; Back to selected work
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Project 04 | Material Handling & Fixture Design
+      </p>
+
+      <h1>
+        Forklift-Mounted Large-Duct Support Saddle
+      </h1>
+
+      <p class="subtitle">
+        Modular material-handling fixture using a common welded base
+        and interchangeable saddle assemblies to support multiple
+        large-duct diameter ranges.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN CONTENT -->
+
+  <main>
+
+
+    <!-- PROJECT OVERVIEW -->
+
+    <section class="summary">
+
+      <div>
+
+        <h2>
+          Project Overview
+        </h2>
+
+        <p>
+          Designed a forklift-mounted saddle to support large-diameter
+          ductwork during angle-ring installation.
+        </p>
+
+        <p>
+          Rather than creating a separate complete fixture for each duct
+          size, the design uses a common welded base frame with removable
+          upper roller-weldment saddle assemblies.
+        </p>
+
+        <p>
+          Three interchangeable upper assemblies provide different support
+          radii so the fixture can be configured for different duct-size
+          ranges while retaining the same base and forklift interface.
+        </p>
+
+      </div>
+
+
+      <aside class="impact-card">
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          One reusable base supports multiple duct-diameter ranges,
+          reducing the need for separate complete fixtures while providing
+          a stable support method for duct handling and fit-up.
+        </p>
+
+      </aside>
+
+    </section>
+
+
+    <!-- DESIGN RESPONSE -->
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>
+          Design Response
+        </h2>
+
+        <ul>
+          <li>Rigid forklift-compatible welded base frame</li>
+
+          <li>
+            Three removable roller-weldment saddle assemblies
+          </li>
+
+          <li>
+            Different saddle radius for each applicable duct-size range
+          </li>
+
+          <li>
+            Curved, padded contact surfaces for supporting the duct
+          </li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>
+          Modular Configuration
+        </h2>
+
+        <ul>
+          <li>
+            Common lower structure remains mounted to the forklift
+          </li>
+
+          <li>
+            Upper saddle assembly is swapped as duct size changes
+          </li>
+
+          <li>
+            Forklift interface is reused across configurations
+          </li>
+
+          <li>
+            Modular construction avoids duplicating the entire fixture
+          </li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- MODULAR DESIGN -->
+
+    <section class="modular-section">
+
+      <h2>
+        Modular Design Concept
+      </h2>
+
+      <p>
+        The fixture separates the universal material-handling interface
+        from the duct-specific support geometry.
+      </p>
+
+
+      <div class="modular-flow">
+
+        <div class="module">
+
+          <strong>
+            Common Base Weldment
+          </strong>
+
+          Forklift-mounted structural base reused for each configuration.
+
+        </div>
+
+
+        <div class="plus">
+          +
+        </div>
+
+
+        <div class="module">
+
+          <strong>
+            Interchangeable Saddle
+          </strong>
+
+          Radius-specific roller-weldment assembly selected for the
+          duct size being supported.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- DESIGN CONSIDERATIONS -->
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>
+          Engineering Considerations
+        </h2>
+
+        <ul>
+          <li>Duct diameter and saddle contact radius</li>
+          <li>Fixture stability during positioning</li>
+          <li>Forklift compatibility and placement</li>
+          <li>Duct-contact surface protection</li>
+          <li>Ease of changing upper saddle assemblies</li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>
+          Production Value
+        </h2>
+
+        <ul>
+          <li>Reusable fixture architecture</li>
+          <li>Adaptability across multiple duct sizes</li>
+          <li>Reduced reliance on improvised blocking</li>
+          <li>Controlled support during angle-ring fit-up</li>
+          <li>Simple configuration changes for shop-floor use</li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- IMAGES -->
+
+    <section class="image-section">
+
+      <h2>
+        Fixture & CAD Development
+      </h2>
+
+      <p>
+        The final project page will show both the physical fixture and
+        the exploded CAD assembly so the modular design can be understood
+        visually.
+      </p>
+
+
+      <div class="image-grid">
+
+        <div>
+
+          <div class="image-placeholder">
+            Installed fixture photograph will go here.
+          </div>
+
+          <p class="caption">
+            Forklift-mounted saddle supporting large-diameter ductwork.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <div class="image-placeholder">
+            Exploded CAD assembly will go here.
+          </div>
+
+          <p class="caption">
+            Exploded CAD view showing the common base frame and
+            interchangeable roller-weldment saddle assemblies.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PORTFOLIO SIGNIFICANCE -->
+
+    <section class="project-significance">
+
+      <h2>
+        Portfolio Significance
+      </h2>
+
+      <ul>
+        <li>
+          Developed a practical material-handling fixture around an
+          existing forklift interface
+        </li>
+
+        <li>
+          Used modular design to accommodate multiple product sizes
+        </li>
+
+        <li>
+          Integrated fabricated weldments with replaceable components
+        </li>
+
+        <li>
+          Used CAD assembly development to evaluate fit,
+          interfaces, and configuration changes
+        </li>
+      </ul>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+
+
+</body>
+
+</html>
