@@ -227,26 +227,33 @@
 
     /* CLICKABLE PROJECTS */
 
-    .project-link {
+    .project-link,
+    .feature-link {
       text-decoration: none;
       color: inherit;
       display: block;
-
       transition:
         transform .2s ease,
         box-shadow .2s ease,
         border-color .2s ease;
     }
 
-    .project-link:hover {
+    .project-link:hover,
+    .feature-link:hover {
       transform: translateY(-3px);
       box-shadow: 0 10px 24px rgba(20,47,71,.14);
       border-color: #a9c9d6;
     }
 
+    .project-link:focus-visible,
+    .feature-link:focus-visible {
+      outline: 3px solid #7fd1e5;
+      outline-offset: 4px;
+    }
+
     .view-project {
       display: inline-block;
-      margin-top: 8px;
+      margin-top: 12px;
       color: var(--teal);
       font-size: 13px;
       font-weight: 700;
@@ -388,9 +395,10 @@
       </p>
 
 
-      <!-- PROJECT 01 -->
+      <!-- PROJECT 01 - CLICKABLE -->
 
-      <article class="feature">
+      <a href="projects/light-tower.html"
+         class="feature feature-link">
 
         <div class="feature-top">
 
@@ -403,7 +411,7 @@
           </h3>
 
           <div class="role">
-            Lead Design Engineer · Allmand / Briggs & Stratton
+            Lead Design Engineer · Allmand / Briggs &amp; Stratton
           </div>
 
         </div>
@@ -425,9 +433,13 @@
             <span>Production Support</span>
           </div>
 
+          <span class="view-project">
+            View project →
+          </span>
+
         </div>
 
-      </article>
+      </a>
 
     </div>
 
@@ -560,9 +572,8 @@
 
           <p>
             Modification of an existing material-handling fixture to
-            accommodate larger stainless-steel sheet stock while
-            maintaining controlled handling of the designated
-            finished surface.
+            accommodate larger stainless-steel sheet stock while maintaining
+            controlled handling of the designated finished surface.
           </p>
 
           <span class="view-project">
@@ -586,9 +597,8 @@
           </h3>
 
           <p>
-            Permanent elevated access structure developed around an
-            overhead trolley system for inspection, service, and
-            equipment maintenance.
+            Permanent elevated access structure developed around an overhead
+            trolley system for inspection, service, and equipment maintenance.
           </p>
 
           <span class="view-project">
@@ -614,3 +624,76 @@
       <div>
 
         <h2>
+          Engineering Approach
+        </h2>
+
+        <p>
+          I focus on understanding the actual operating constraint,
+          defining the mechanical cause of the problem, and developing
+          a durable solution around the equipment, operator,
+          manufacturing process, and maintenance needs.
+        </p>
+
+        <p>
+          This site is a concise digital companion to my full
+          engineering portfolio.
+        </p>
+
+      </div>
+
+
+      <div class="skills">
+
+        <strong>
+          Core capabilities
+        </strong>
+
+        <ul>
+          <li>Mechanical design and CAD integration</li>
+          <li>New product development</li>
+          <li>Weldments and sheet metal</li>
+          <li>Fixtures and manufacturing tooling</li>
+          <li>Material handling and equipment access</li>
+          <li>Design for assembly and production support</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="section alt" id="contact">
+
+    <div class="wrap">
+
+      <h2>
+        Contact
+      </h2>
+
+      <p class="lead">
+        Mechanical Engineer based in Arizona.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="wrap">
+      © Tallon Anderson · Mechanical Engineering Portfolio
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
