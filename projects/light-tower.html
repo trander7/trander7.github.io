@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Night-Lite GR-Series Light Tower | Tallon Anderson</title>
+
+  <style>
+    :root {
+      --navy: #17354a;
+      --blue: #236a8c;
+      --light-blue: #eef4f7;
+      --light-gray: #f5f7f8;
+      --border: #d8e0e5;
+      --text: #25313a;
+      --muted: #62717c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #142f44, #275b74);
+      color: var(--white);
+      padding: 70px 24px;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #70c3e4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 800px;
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      max-width: 800px;
+      margin: 0;
+      color: #dceaf0;
+      font-size: 18px;
+    }
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 55px 24px 80px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.55fr 0.85fr;
+      gap: 34px;
+      margin-bottom: 42px;
+    }
+
+    .role-card {
+      padding: 26px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .role-card p {
+      margin-bottom: 6px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .content-card {
+      padding: 28px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    .scope-section {
+      margin: 45px 0;
+    }
+
+    .scope-intro {
+      color: var(--muted);
+      max-width: 800px;
+    }
+
+    .scope-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .scope-item {
+      background: var(--light-blue);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 22px;
+      text-align: center;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .image-section {
+      margin: 48px 0;
+    }
+
+    .image-placeholder {
+      min-height: 360px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gray);
+      border: 2px dashed #aebbc4;
+      border-radius: 6px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 18px;
+    }
+
+    .image-grid .image-placeholder {
+      min-height: 260px;
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .portfolio-significance {
+      padding: 32px;
+      margin-top: 45px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+    }
+
+    .portfolio-significance h2 {
+      color: var(--white);
+    }
+
+    .portfolio-significance ul {
+      columns: 2;
+      column-gap: 50px;
+    }
+
+    footer {
+      padding: 30px 24px;
+      background: var(--light-gray);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 750px) {
+      .summary,
+      .content-grid,
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .scope-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .portfolio-significance ul {
+        columns: 1;
+      }
+
+      .hero {
+        padding: 52px 24px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .scope-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="../index.html">TALLON ANDERSON</a>
+      <a class="back-link" href="../index.html">&#8592; Back to selected work</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">Project 01 | New Product Development</p>
+
+      <h1>Night-Lite GR-Series Light Tower</h1>
+
+      <p class="subtitle">
+        Lead mechanical design involvement in the development of a mobile
+        light tower, including structural, enclosure, mounting, and
+        production-focused mechanical systems.
+      </p>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="summary">
+
+      <div>
+        <h2>Project Overview</h2>
+
+        <p>
+          Served as Lead Design Engineer for the Night-Lite GR-Series light
+          tower at Allmand / Briggs &amp; Stratton.
+        </p>
+
+        <p>
+          Design responsibility included mechanical development across the
+          frame, tower, enclosure, control box, engine and generator mounting,
+          and shrouds.
+        </p>
+
+        <p>
+          The project required integrating multiple mechanical systems into a
+          manufacturable product while considering component packaging,
+          structural interfaces, assembly, and production requirements.
+        </p>
+      </div>
+
+      <aside class="role-card">
+        <h3>Role</h3>
+        <p><strong>Lead Design Engineer</strong></p>
+        <p>Allmand / Briggs &amp; Stratton</p>
+      </aside>
+
+    </section>
+
+
+    <section class="scope-section">
+
+      <h2>Mechanical Design Scope</h2>
+
+      <p class="scope-intro">
+        Mechanical design involvement extended across several major systems
+        and assemblies within the light tower.
+      </p>
+
+      <div class="scope-grid">
+
+        <div class="scope-item">
+          Frame
+        </div>
+
+        <div class="scope-item">
+          Tower
+        </div>
+
+        <div class="scope-item">
+          Enclosure
+        </div>
+
+        <div class="scope-item">
+          Control Box
+        </div>
+
+        <div class="scope-item">
+          Engine &amp; Generator Mounting
+        </div>
+
+        <div class="scope-item">
+          Shrouds
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>Design Responsibilities</h2>
+
+        <ul>
+          <li>Mechanical design and CAD development</li>
+          <li>Structural frame and weldment development</li>
+          <li>Sheet-metal enclosure and shroud design</li>
+          <li>Integration of major equipment and mounting interfaces</li>
+          <li>Packaging of mechanical systems within the overall product</li>
+          <li>Design support for manufacturing and assembly</li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Engineering Considerations</h2>
+
+        <ul>
+          <li>Component packaging and mechanical interfaces</li>
+          <li>Structural load paths and equipment support</li>
+          <li>Manufacturability of fabricated and sheet-metal components</li>
+          <li>Assembly access and serviceability</li>
+          <li>Repeatable production and component fit-up</li>
+          <li>Integration of multiple subsystems into one product</li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Product Development</h2>
+
+      <div class="image-placeholder">
+        Main Night-Lite GR-Series product photograph will go here.
+      </div>
+
+      <p class="caption">
+        Night-Lite GR-Series mobile light tower.
+      </p>
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Mechanical Design Development</h2>
+
+      <p>
+        Selected CAD views can be used here to highlight the mechanical
+        architecture, structural assemblies, sheet-metal components, and
+        equipment integration.
+      </p>
+
+      <div class="image-grid">
+
+        <div>
+          <div class="image-placeholder">
+            CAD assembly image will go here.
+          </div>
+
+          <p class="caption">
+            Overall CAD assembly and mechanical packaging.
+          </p>
+        </div>
+
+        <div>
+          <div class="image-placeholder">
+            Detailed CAD or fabrication image will go here.
+          </div>
+
+          <p class="caption">
+            Detail view highlighting structural, enclosure, or mounting design.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>Manufacturing Focus</h2>
+
+        <p>
+          The mechanical design included fabricated structures, weldments,
+          sheet-metal components, equipment mounts, and assembly interfaces.
+          Design development considered how these components would be produced,
+          assembled, and supported in a manufacturing environment.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>System-Level Design</h2>
+
+        <p>
+          Work across multiple assemblies required coordination of geometry,
+          mounting interfaces, available packaging space, and interactions
+          between major mechanical systems within the finished product.
+        </p>
+
+      </article>
+
+    </section>
+
+
+    <section class="portfolio-significance">
+
+      <h2>Portfolio Significance</h2>
+
+      <ul>
+        <li>Lead design responsibility on a complete production product</li>
+        <li>Mechanical design spanning multiple major assemblies</li>
+        <li>Experience with weldments and sheet-metal design</li>
+        <li>Integration of equipment, structures, and enclosure systems</li>
+        <li>Design developed with manufacturing and assembly in mind</li>
+        <li>Broad product-level CAD and mechanical integration experience</li>
+      </ul>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    Tallon Anderson | Mechanical Engineering Portfolio
+  </footer>
+
+</body>
+</html>
