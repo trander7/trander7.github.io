@@ -65,9 +65,9 @@
     }
 
     .hero {
-      padding: 70px 24px;
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
+      padding: 70px 24px;
     }
 
     .hero-content {
@@ -92,7 +92,7 @@
     }
 
     .subtitle {
-      max-width: 760px;
+      max-width: 800px;
       margin: 0;
       color: #dceaf0;
       font-size: 18px;
@@ -120,9 +120,18 @@
       margin-top: 0;
     }
 
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
     .summary {
       display: grid;
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.55fr 0.85fr;
       gap: 34px;
       margin-bottom: 42px;
     }
@@ -153,49 +162,6 @@
       border-radius: 6px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 9px;
-    }
-
-    .feature-section {
-      margin: 48px 0;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 25px;
-    }
-
-    .feature-item {
-      padding: 24px;
-      background: var(--light-blue);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-    }
-
-    .feature-number {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--blue);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-    }
-
-    .feature-item strong {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--navy);
-      font-size: 18px;
-    }
-
     .image-section {
       margin: 48px 0;
     }
@@ -211,9 +177,8 @@
     .main-image img {
       display: block;
       width: 100%;
-      max-width: 950px;
-      max-height: 700px;
       height: auto;
+      max-height: 650px;
       margin: 0 auto;
       object-fit: contain;
       border-radius: 4px;
@@ -222,47 +187,56 @@
     .image-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 28px;
+      gap: 18px;
+      margin-top: 24px;
     }
 
-    .project-image {
-      width: 100%;
-      padding: 12px;
+    .image-card {
+      padding: 14px;
       background: var(--light-gray);
       border: 1px solid var(--border);
       border-radius: 6px;
     }
 
-    .project-image img {
+    .image-card img {
       display: block;
       width: 100%;
-      height: 360px;
-      margin: 0 auto;
-      object-fit: contain;
-      background: var(--white);
+      height: 310px;
+      object-fit: cover;
       border-radius: 4px;
     }
 
     .caption {
-      margin-top: 10px;
+      margin: 10px 2px 0;
       color: var(--muted);
       font-size: 13px;
     }
 
-    .project-significance {
-      margin-top: 48px;
+    .result-section {
+      margin: 45px 0;
+      padding: 30px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .result-section p {
+      margin-bottom: 0;
+    }
+
+    .portfolio-significance {
       padding: 32px;
+      margin-top: 45px;
       background: var(--navy);
       color: var(--white);
       border-radius: 6px;
     }
 
-    .project-significance h2 {
+    .portfolio-significance h2 {
       color: var(--white);
     }
 
-    .project-significance ul {
+    .portfolio-significance ul {
       columns: 2;
       column-gap: 50px;
     }
@@ -278,17 +252,15 @@
     @media (max-width: 750px) {
       .summary,
       .content-grid,
-      .feature-grid,
       .image-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-image img {
+      .image-card img {
         height: auto;
-        max-height: 600px;
       }
 
-      .project-significance ul {
+      .portfolio-significance ul {
         columns: 1;
       }
 
@@ -310,14 +282,10 @@
       .back-link {
         text-align: right;
       }
-
-      .main-image,
-      .project-image {
-        padding: 7px;
-      }
     }
   </style>
 </head>
+
 
 <body>
 
@@ -351,9 +319,8 @@
       </h1>
 
       <p class="subtitle">
-        Elevated access structure developed around an overhead trolley
-        network to improve access for inspection, service, and equipment
-        maintenance.
+        Elevated access structure developed around an overhead trolley network
+        to improve access for inspection, service, and equipment maintenance.
       </p>
 
     </div>
@@ -363,6 +330,7 @@
 
   <main>
 
+
     <section class="summary">
 
       <div>
@@ -370,20 +338,21 @@
         <h2>Project Overview</h2>
 
         <p>
-          Designed a mezzanine-style catwalk to provide elevated access
-          to overhead trolleys serving the coating and oven areas.
+          Designed a mezzanine-style catwalk from the ground up to provide
+          elevated access to overhead trolleys serving the coating and oven
+          areas.
         </p>
 
         <p>
-          The structure incorporated stairs, guardrails, framing, bracing,
-          and an elevated working platform positioned around the existing
-          trolley system.
+          The original purpose included providing closer access to the trolley
+          system for applying protective foil as well as performing maintenance.
+          After the process was changed so grounding could be completed inside
+          the booths, the foiling requirement was eliminated.
         </p>
 
         <p>
-          Although the original process requirement that initiated the
-          project was later eliminated, the completed structure remained
-          useful as dedicated maintenance access for the overhead trolley
+          The completed structure remained useful as a dedicated maintenance
+          platform for inspection, service, and repair of the overhead trolley
           equipment.
         </p>
 
@@ -406,14 +375,15 @@
 
     <section class="content-grid">
 
+
       <article class="content-card">
 
         <h2>Design Response</h2>
 
         <ul>
           <li>
-            Fixed elevated platform positioned beneath and alongside
-            the overhead trolley system
+            Fixed elevated platform positioned beneath and alongside the
+            overhead trolley system
           </li>
 
           <li>
@@ -421,8 +391,163 @@
           </li>
 
           <li>
-            Guardrails incorporated around exposed platform edges
+            Perimeter guardrails around exposed platform edges
           </li>
 
           <li>
-            Structural framing and bracing
+            Structural framing and bracing supporting the elevated platform
+          </li>
+
+          <li>
+            Working area positioned close to the trolley path for inspection
+            and service
+          </li>
+
+          <li>
+            Permanent access solution that remained useful after the original
+            process requirement changed
+          </li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Current Maintenance Uses</h2>
+
+        <ul>
+          <li>
+            Routine trolley inspection
+          </li>
+
+          <li>
+            Bearing replacement
+          </li>
+
+          <li>
+            Wheel replacement
+          </li>
+
+          <li>
+            Repair of damaged trolley components
+          </li>
+
+          <li>
+            Preventive maintenance
+          </li>
+
+          <li>
+            Corrective maintenance along the trolley system
+          </li>
+        </ul>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="image-section">
+
+      <h2>Installed Maintenance Platform</h2>
+
+      <p>
+        The completed catwalk provides a permanent elevated work area beneath
+        and alongside the overhead trolley network.
+      </p>
+
+
+      <div class="main-image">
+
+        <img
+          src="catwalk-overview.jpg"
+          alt="Wide view of installed elevated maintenance platform beneath the overhead trolley system"
+        >
+
+      </div>
+
+      <p class="caption">
+        Wide installed view showing the maintenance platform integrated with
+        the surrounding overhead trolley system.
+      </p>
+
+
+      <div class="image-grid">
+
+
+        <div class="image-card">
+
+          <img
+            src="catwalk-front.jpg"
+            alt="Front view of elevated maintenance platform and overhead trolley tracks"
+          >
+
+          <p class="caption">
+            Front view showing the platform, guardrails, structural framing,
+            bracing, and relationship to the trolley path.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <img
+            src="catwalk-access.jpg"
+            alt="Stair access to elevated maintenance platform beneath overhead trolley tracks"
+          >
+
+          <p class="caption">
+            Access view showing the stairs, elevated working area, guardrails,
+            and proximity to the overhead trolley system.
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+    <section class="content-grid">
+
+
+      <article class="content-card">
+
+        <h2>Engineering Approach</h2>
+
+        <p>
+          The platform was designed around the existing trolley system and
+          production-area constraints. The structure combines elevated working
+          access, stairs, guardrails, support framing, and bracing into a
+          permanent maintenance structure.
+        </p>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>Adaptability</h2>
+
+        <p>
+          Although the original need for trolley foiling was later removed,
+          the platform continued to provide useful access for regular trolley
+          inspection and maintenance. The structure therefore remained useful
+          even after the process that originally drove the project changed.
+        </p>
+
+      </article>
+
+
+    </section>
+
+
+    <section class="result-section">
+
+      <h2>Result</h2>
+
+      <p>
+        The completed catwalk 
