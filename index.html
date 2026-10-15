@@ -225,13 +225,16 @@
       font-size: 14px;
     }
 
-    /* CLICKABLE PROJECT */
+    /* CLICKABLE PROJECT CARDS */
 
     .project-link {
       text-decoration: none;
       color: inherit;
       display: block;
-      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        border-color .2s ease;
     }
 
     .project-link:hover {
@@ -264,18 +267,6 @@
 
     .skills li {
       margin: 9px 0;
-    }
-
-    /* CONTACT */
-
-    .contact-link {
-      color: var(--teal);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    .contact-link:hover {
-      text-decoration: underline;
     }
 
     /* FOOTER */
@@ -318,7 +309,6 @@
     }
   </style>
 </head>
-
 
 <body>
 
@@ -377,7 +367,6 @@
   <!-- SELECTED WORK -->
 
   <section class="section" id="work">
-
     <div class="wrap">
 
       <h2>
@@ -410,7 +399,6 @@
 
         </div>
 
-
         <div class="feature-body">
 
           <p>
@@ -432,7 +420,6 @@
       </article>
 
     </div>
-
   </section>
 
 
@@ -485,9 +472,10 @@
         </div>
 
 
-        <!-- PROJECT 04 -->
+        <!-- PROJECT 04 - CLICKABLE -->
 
-        <div class="card">
+        <a href="projects/duct-saddle.html"
+           class="card project-link">
 
           <div class="num">
             PROJECT 04
@@ -498,11 +486,16 @@
           </h3>
 
           <p>
-            Modular support fixture using a common forklift-mounted base and
-            interchangeable radius-specific saddle tops.
+            Modular support fixture using a common forklift-mounted base
+            and interchangeable radius-specific saddle assemblies for
+            multiple duct sizes.
           </p>
 
-        </div>
+          <span class="view-project">
+            View project →
+          </span>
+
+        </a>
 
 
         <!-- PROJECT 05 - CLICKABLE -->
@@ -563,8 +556,8 @@
           </h3>
 
           <p>
-            Permanent elevated access structure developed around an overhead
-            trolley system for inspection and maintenance.
+            Permanent elevated access structure developed around an
+            overhead trolley system for inspection and maintenance.
           </p>
 
         </div>
@@ -573,7 +566,6 @@
       </div>
 
     </div>
-
   </section>
 
 
@@ -590,15 +582,15 @@
         </h2>
 
         <p>
-          I focus on understanding the actual operating constraint, defining
-          the mechanical cause of the problem, and developing a durable
-          solution around the equipment, operator, manufacturing process,
-          and maintenance needs.
+          I focus on understanding the actual operating constraint,
+          defining the mechanical cause of the problem, and developing
+          a durable solution around the equipment, operator,
+          manufacturing process, and maintenance needs.
         </p>
 
         <p>
-          This site is a concise digital companion to my full engineering
-          portfolio.
+          This site is a concise digital companion to my full
+          engineering portfolio.
         </p>
 
       </div>
@@ -622,7 +614,6 @@
       </div>
 
     </div>
-
   </section>
 
 
@@ -648,13 +639,10 @@
   <!-- FOOTER -->
 
   <footer>
-
     <div class="wrap">
       © Tallon Anderson · Mechanical Engineering Portfolio
     </div>
-
   </footer>
-
 
 </body>
 </html>
