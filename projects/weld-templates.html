@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Angle Ring Stitch-Weld Templates | Tallon Anderson</title>
+
+  <style>
+    :root {
+      --navy: #17354a;
+      --blue: #236a8c;
+      --light-blue: #eef4f7;
+      --light-gray: #f5f7f8;
+      --border: #d8e0e5;
+      --text: #25313a;
+      --muted: #62717c;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 18px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      color: var(--navy);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+    }
+
+    .back-link {
+      color: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: linear-gradient(135deg, #142f44, #275b74);
+      color: var(--white);
+      padding: 70px 24px;
+    }
+
+    .hero-content {
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #70c3e4;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 850px;
+      margin: 0 0 16px;
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: #dceaf0;
+      font-size: 18px;
+    }
+
+    /* MAIN */
+
+    main {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 55px 24px 80px;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      color: var(--navy);
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 12px;
+      color: var(--navy);
+      font-size: 19px;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    /* OVERVIEW */
+
+    .summary {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 34px;
+      margin-bottom: 42px;
+    }
+
+    .impact-card {
+      padding: 26px;
+      background: var(--light-blue);
+      border-left: 5px solid var(--blue);
+      border-radius: 4px;
+    }
+
+    .impact-card p {
+      margin-bottom: 0;
+      font-weight: 600;
+    }
+
+    /* CONTENT */
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-bottom: 42px;
+    }
+
+    .content-card {
+      padding: 28px;
+      background: var(--light-gray);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 9px;
+    }
+
+    /* PROCESS */
+
+    .process-section {
+      margin: 48px 0;
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .process-item {
+      padding: 24px;
+      background: var(--light-blue);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    .process-number {
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 7px;
+    }
+
+    .process-item strong {
+      display: block;
+      color: var(--navy);
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    /* IMAGE */
+
+    .image-section {
+      margin: 48px 0;
+    }
+
+    .image-placeholder {
+      min-height: 360px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--light-gray);
+      border: 2px dashed #aebbc4;
+      border-radius: 6px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    .caption {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* SIGNIFICANCE */
+
+    .project-significance {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--navy);
+      color: var(--white);
+      border-radius: 6px;
+    }
+
+    .project-significance h2 {
+      color: var(--white);
+    }
+
+    .project-significance ul {
+      columns: 2;
+      column-gap: 50px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      padding: 30px 24px;
+      background: var(--light-gray);
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 750px) {
+
+      .summary,
+      .content-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-significance ul {
+        columns: 1;
+      }
+
+      .hero {
+        padding: 52px 24px;
+      }
+
+      main {
+        padding-top: 40px;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="site-header">
+
+    <nav class="nav">
+
+      <a class="brand" href="../index.html">
+        TALLON ANDERSON
+      </a>
+
+      <a class="back-link" href="../index.html#work">
+        &#8592; Back to selected work
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        Project 02 | Manufacturing Tooling
+      </p>
+
+      <h1>
+        Angle Ring Stitch-Weld Templates
+      </h1>
+
+      <p class="subtitle">
+        Reusable fabrication templates developed to establish consistent
+        stitch-weld locations and reduce repeated manual layout during
+        angle-ring attachment.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN CONTENT -->
+
+  <main>
+
+
+    <!-- OVERVIEW -->
+
+    <section class="summary">
+
+      <div>
+
+        <h2>
+          Project Overview
+        </h2>
+
+        <p>
+          Designed reusable layout templates for attaching angle rings to
+          round ductwork.
+        </p>
+
+        <p>
+          Each template corresponds to the applicable duct and angle-ring
+          size and provides predefined locations for weld quantity and
+          stitch spacing.
+        </p>
+
+        <p>
+          Fabricators can transfer the required locations directly from the
+          template instead of laying out each stitch individually with a
+          tape measure.
+        </p>
+
+      </div>
+
+
+      <aside class="impact-card">
+
+        <h3>
+          Impact
+        </h3>
+
+        <p>
+          Faster layout, more consistent stitch spacing, improved
+          repeatability, and reduced opportunity for manual measurement
+          error.
+        </p>
+
+      </aside>
+
+    </section>
+
+
+    <!-- PROBLEM / RESPONSE -->
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>
+          Problem Addressed
+        </h2>
+
+        <ul>
+          <li>
+            Weld locations required repeated manual layout
+          </li>
+
+          <li>
+            Layout depended on measuring around each duct and angle ring
+          </li>
+
+          <li>
+            Repetitive measurement created opportunities for variation
+          </li>
+
+          <li>
+            Similar assemblies required the same layout process repeatedly
+          </li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>
+          Design Response
+        </h2>
+
+        <ul>
+          <li>
+            Reusable, size-specific template system
+          </li>
+
+          <li>
+            Predefined stitch-weld locations and spacing
+          </li>
+
+          <li>
+            Quick fit-up to the corresponding duct and angle-ring size
+          </li>
+
+          <li>
+            Simple visual layout method for repeat fabrication
+          </li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- PROCESS -->
+
+    <section class="process-section">
+
+      <h2>
+        Shop-Floor Workflow
+      </h2>
+
+      <p>
+        The tooling converts a repeated measuring task into a simple,
+        repeatable transfer process.
+      </p>
+
+
+      <div class="process-grid">
+
+        <div class="process-item">
+
+          <div class="process-number">
+            STEP 01
+          </div>
+
+          <strong>
+            Match Template
+          </strong>
+
+          Select the template corresponding to the duct and angle-ring size.
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">
+            STEP 02
+          </div>
+
+          <strong>
+            Transfer Layout
+          </strong>
+
+          Position the template and transfer the predefined stitch locations
+          to the assembly.
+
+        </div>
+
+
+        <div class="process-item">
+
+          <div class="process-number">
+            STEP 03
+          </div>
+
+          <strong>
+            Repeat Consistently
+          </strong>
+
+          Use the same layout method across repeat assemblies of the
+          applicable size.
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ENGINEERING / PRODUCTION -->
+
+    <section class="content-grid">
+
+      <article class="content-card">
+
+        <h2>
+          Engineering Considerations
+        </h2>
+
+        <ul>
+          <li>Applicable duct and angle-ring sizes</li>
+          <li>Required weld quantity</li>
+          <li>Stitch spacing around the circumference</li>
+          <li>Template fit and positioning</li>
+          <li>Ease of identification and repeated use</li>
+        </ul>
+
+      </article>
+
+
+      <article class="content-card">
+
+        <h2>
+          Production Value
+        </h2>
+
+        <ul>
+          <li>Reduced repetitive measuring</li>
+          <li>Consistent weld-location layout</li>
+          <li>Improved repeatability between assemblies</li>
+          <li>Simple tooling requiring minimal setup</li>
+          <li>Reusable method for recurring fabrication work</li>
+        </ul>
+
+      </article>
+
+    </section>
+
+
+    <!-- IMAGE PLACEHOLDER -->
+
+    <section class="image-section">
+
+      <h2>
+        Template Design
+      </h2>
+
+      <p>
+        The finished page will use the existing project image to show how
+        the physical template establishes weld quantity and stitch spacing.
+      </p>
+
+
+      <div class="image-placeholder">
+
+        Angle-ring stitch-weld template photograph will go here.
+
+      </div>
+
+
+      <p 
