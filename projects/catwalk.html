@@ -8,7 +8,6 @@
   <title>Overhead Trolley Maintenance Catwalk | Tallon Anderson</title>
 
   <style>
-
     :root {
       --navy: #17354a;
       --blue: #236a8c;
@@ -24,10 +23,6 @@
       box-sizing: border-box;
     }
 
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -35,8 +30,6 @@
       background: var(--white);
       line-height: 1.6;
     }
-
-    /* HEADER */
 
     .site-header {
       background: var(--white);
@@ -71,12 +64,10 @@
       text-decoration: underline;
     }
 
-    /* HERO */
-
     .hero {
+      padding: 70px 24px;
       background: linear-gradient(135deg, #142f44, #275b74);
       color: var(--white);
-      padding: 70px 24px;
     }
 
     .hero-content {
@@ -107,8 +98,6 @@
       font-size: 18px;
     }
 
-    /* PAGE */
-
     main {
       max-width: 1050px;
       margin: 0 auto;
@@ -131,8 +120,6 @@
       margin-top: 0;
     }
 
-    /* OVERVIEW */
-
     .summary {
       display: grid;
       grid-template-columns: 1.5fr 1fr;
@@ -151,8 +138,6 @@
       margin-bottom: 0;
       font-weight: 600;
     }
-
-    /* CONTENT */
 
     .content-grid {
       display: grid;
@@ -177,8 +162,6 @@
       margin-bottom: 9px;
     }
 
-    /* FEATURES */
-
     .feature-section {
       margin: 48px 0;
     }
@@ -199,57 +182,66 @@
 
     .feature-number {
       display: block;
+      margin-bottom: 8px;
       color: var(--blue);
       font-size: 13px;
       font-weight: 700;
-      letter-spacing: .08em;
-      margin-bottom: 8px;
+      letter-spacing: 0.08em;
     }
 
     .feature-item strong {
       display: block;
+      margin-bottom: 8px;
       color: var(--navy);
       font-size: 18px;
-      margin-bottom: 8px;
     }
-
-    /* IMAGES */
 
     .image-section {
       margin: 48px 0;
     }
 
-    .image-hero {
-      min-height: 360px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .main-image {
+      width: 100%;
+      padding: 16px;
       background: var(--light-gray);
-      border: 2px dashed #aebbc4;
+      border: 1px solid var(--border);
       border-radius: 6px;
-      color: var(--muted);
-      text-align: center;
-      margin-bottom: 22px;
+    }
+
+    .main-image img {
+      display: block;
+      width: 100%;
+      max-width: 950px;
+      max-height: 700px;
+      height: auto;
+      margin: 0 auto;
+      object-fit: contain;
+      border-radius: 4px;
     }
 
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 22px;
+      margin-top: 28px;
     }
 
-    .image-placeholder {
-      min-height: 260px;
-      padding: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    .project-image {
+      width: 100%;
+      padding: 12px;
       background: var(--light-gray);
-      border: 2px dashed #aebbc4;
+      border: 1px solid var(--border);
       border-radius: 6px;
-      color: var(--muted);
-      text-align: center;
+    }
+
+    .project-image img {
+      display: block;
+      width: 100%;
+      height: 360px;
+      margin: 0 auto;
+      object-fit: contain;
+      background: var(--white);
+      border-radius: 4px;
     }
 
     .caption {
@@ -257,8 +249,6 @@
       color: var(--muted);
       font-size: 13px;
     }
-
-    /* SIGNIFICANCE */
 
     .project-significance {
       margin-top: 48px;
@@ -277,8 +267,6 @@
       column-gap: 50px;
     }
 
-    /* FOOTER */
-
     footer {
       padding: 30px 24px;
       background: var(--light-gray);
@@ -287,15 +275,17 @@
       font-size: 13px;
     }
 
-    /* MOBILE */
-
     @media (max-width: 750px) {
-
       .summary,
       .content-grid,
       .feature-grid,
       .image-grid {
         grid-template-columns: 1fr;
+      }
+
+      .project-image img {
+        height: auto;
+        max-height: 600px;
       }
 
       .project-significance ul {
@@ -309,16 +299,27 @@
       main {
         padding-top: 40px;
       }
-
     }
 
+    @media (max-width: 500px) {
+      .nav {
+        align-items: flex-start;
+        gap: 16px;
+      }
+
+      .back-link {
+        text-align: right;
+      }
+
+      .main-image,
+      .project-image {
+        padding: 7px;
+      }
+    }
   </style>
 </head>
 
-
 <body>
-
-  <!-- HEADER -->
 
   <header class="site-header">
 
@@ -337,14 +338,12 @@
   </header>
 
 
-  <!-- HERO -->
-
   <section class="hero">
 
     <div class="hero-content">
 
       <p class="eyebrow">
-        Project 07 | Structural Integration & Maintenance Access
+        Project 07 | Structural Integration &amp; Maintenance Access
       </p>
 
       <h1>
@@ -362,20 +361,13 @@
   </section>
 
 
-  <!-- MAIN CONTENT -->
-
   <main>
-
-
-    <!-- OVERVIEW -->
 
     <section class="summary">
 
       <div>
 
-        <h2>
-          Project Overview
-        </h2>
+        <h2>Project Overview</h2>
 
         <p>
           Designed a mezzanine-style catwalk to provide elevated access
@@ -400,9 +392,7 @@
 
       <aside class="impact-card">
 
-        <h3>
-          Impact
-        </h3>
+        <h3>Impact</h3>
 
         <p>
           Improved access to the overhead trolley system for inspection,
@@ -414,15 +404,11 @@
     </section>
 
 
-    <!-- DESIGN RESPONSE -->
-
     <section class="content-grid">
 
       <article class="content-card">
 
-        <h2>
-          Design Response
-        </h2>
+        <h2>Design Response</h2>
 
         <ul>
           <li>
@@ -439,259 +425,4 @@
           </li>
 
           <li>
-            Structural framing and bracing integrated around existing
-            equipment
-          </li>
-
-          <li>
-            Continuous work area provided for inspection and maintenance
-          </li>
-        </ul>
-
-      </article>
-
-
-      <article class="content-card">
-
-        <h2>
-          Maintenance Use
-        </h2>
-
-        <ul>
-          <li>Routine trolley inspection</li>
-
-          <li>
-            Bearing and wheel replacement
-          </li>
-
-          <li>
-            Access to trolley-mounted components
-          </li>
-
-          <li>
-            Preventive maintenance activities
-          </li>
-
-          <li>
-            Corrective maintenance and troubleshooting
-          </li>
-        </ul>
-
-      </article>
-
-    </section>
-
-
-    <!-- ENGINEERING -->
-
-    <section class="feature-section">
-
-      <h2>
-        Design Considerations
-      </h2>
-
-      <p>
-        The structure had to provide useful elevated access while fitting
-        around an existing production environment and overhead material
-        handling system.
-      </p>
-
-
-      <div class="feature-grid">
-
-        <div class="feature-item">
-
-          <span class="feature-number">
-            01
-          </span>
-
-          <strong>
-            Access
-          </strong>
-
-          Position the platform so maintenance personnel can reach
-          trolley components without relying solely on temporary
-          access equipment.
-
-        </div>
-
-
-        <div class="feature-item">
-
-          <span class="feature-number">
-            02
-          </span>
-
-          <strong>
-            Integration
-          </strong>
-
-          Fit the stairs, platform, railing, and structure around the
-          existing trolley system and surrounding equipment.
-
-        </div>
-
-
-        <div class="feature-item">
-
-          <span class="feature-number">
-            03
-          </span>
-
-          <strong>
-            Maintainability
-          </strong>
-
-          Provide a permanent working area that supports recurring
-          inspection and service activities.
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- ENGINEERING / PRODUCTION -->
-
-    <section class="content-grid">
-
-      <article class="content-card">
-
-        <h2>
-          Structural Integration
-        </h2>
-
-        <ul>
-          <li>Elevated platform framing</li>
-          <li>Stair access</li>
-          <li>Guardrail system</li>
-          <li>Structural bracing</li>
-          <li>Integration with existing production equipment</li>
-        </ul>
-
-      </article>
-
-
-      <article class="content-card">
-
-        <h2>
-          Long-Term Value
-        </h2>
-
-        <ul>
-          <li>Dedicated access to trolley components</li>
-          <li>Improved serviceability of overhead equipment</li>
-          <li>Useful platform despite the original process changing</li>
-          <li>Supports recurring preventive maintenance</li>
-          <li>Provides permanent access within the production area</li>
-        </ul>
-
-      </article>
-
-    </section>
-
-
-    <!-- IMAGES -->
-
-    <section class="image-section">
-
-      <h2>
-        Completed Installation
-      </h2>
-
-      <p>
-        The finished project can be shown with a combination of
-        overall installation photographs and closer views of the
-        access structure around the trolley system.
-      </p>
-
-
-      <div class="image-hero">
-        Large overall photograph of the completed catwalk will go here.
-      </div>
-
-      <p class="caption">
-        Overall view of the elevated maintenance platform installed
-        around the overhead trolley network.
-      </p>
-
-
-      <div class="image-grid">
-
-        <div>
-
-          <div class="image-placeholder">
-            Installed stair and catwalk photograph will go here.
-          </div>
-
-          <p class="caption">
-            Stair and guardrail arrangement providing access to the
-            elevated work platform.
-          </p>
-
-        </div>
-
-
-        <div>
-
-          <div class="image-placeholder">
-            Trolley access photograph will go here.
-          </div>
-
-          <p class="caption">
-            Maintenance access provided beneath and alongside the
-            overhead trolley system.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- SIGNIFICANCE -->
-
-    <section class="project-significance">
-
-      <h2>
-        Portfolio Significance
-      </h2>
-
-      <ul>
-        <li>
-          Designed a permanent structure around existing production
-          equipment
-        </li>
-
-        <li>
-          Integrated access, stairs, guardrails, framing, and bracing
-        </li>
-
-        <li>
-          Improved maintainability of an overhead material-handling
-          system
-        </li>
-
-        <li>
-          Created a solution that retained practical value after the
-          original process requirement changed
-        </li>
-      </ul>
-
-    </section>
-
-
-  </main>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-    Tallon Anderson | Mechanical Engineering Portfolio
-  </footer>
-
-
-</body>
-
-</html>
+            Structural framing and bracing
