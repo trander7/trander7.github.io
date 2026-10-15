@@ -166,28 +166,38 @@
       margin: 48px 0;
     }
 
-    .project-image {
-      width: 100%;
-      padding: 20px;
+    .image-intro {
+      max-width: 850px;
+      color: var(--muted);
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .image-card {
+      display: flex;
+      flex-direction: column;
+      padding: 14px;
       background: var(--light-gray);
       border: 1px solid var(--border);
       border-radius: 6px;
-      text-align: center;
     }
 
-    .project-image img {
+    .image-card img {
       display: block;
       width: 100%;
-      max-width: 900px;
-      max-height: 700px;
-      height: auto;
-      margin: 0 auto;
+      height: 420px;
       object-fit: contain;
+      background: var(--white);
       border-radius: 4px;
     }
 
     .caption {
-      margin-top: 10px;
+      margin: 10px 2px 2px;
       color: var(--muted);
       font-size: 13px;
     }
@@ -250,8 +260,14 @@
     @media (max-width: 750px) {
       .summary,
       .content-grid,
+      .image-grid,
       .benefit-grid {
         grid-template-columns: 1fr;
+      }
+
+      .image-card img {
+        height: auto;
+        max-height: 650px;
       }
 
       .portfolio-significance ul {
@@ -375,7 +391,6 @@
         <h2>Problem Addressed</h2>
 
         <ul>
-
           <li>
             Existing fixture was configured for 5 ft x 8 ft sheet stock
           </li>
@@ -385,13 +400,12 @@
           </li>
 
           <li>
-            Large sheets required controlled handling during flipping
+            Large sheets required controlled support during flipping
           </li>
 
           <li>
-            Surface condition needed to be considered during material handling
+            Sheet-surface condition needed to be considered during handling
           </li>
-
         </ul>
 
       </article>
@@ -402,23 +416,21 @@
         <h2>Design Response</h2>
 
         <ul>
-
           <li>
             Modified the existing fixture for 5 ft x 10 ft sheet compatibility
           </li>
 
           <li>
-            Retained the basic concept of the existing sheet-flipping equipment
+            Extended the frame and sheet-support arrangement
           </li>
 
           <li>
-            Provided support appropriate for the larger sheet format
+            Retained the basic operating concept of the original equipment
           </li>
 
           <li>
             Maintained a controlled method for flipping and positioning sheets
           </li>
-
         </ul>
 
       </article>
@@ -429,21 +441,49 @@
 
     <section class="image-section">
 
-      <h2>Modified Sheet Flipper</h2>
+      <h2>Sheet Flipper Modification</h2>
 
-      <div class="project-image">
+      <p class="image-intro">
+        The completed fixture and CAD assembly show how the existing
+        sheet-flipping equipment was extended to support 5 ft x 10 ft
+        stainless-steel sheets.
+      </p>
 
-        <img
-          src="sheet-flipper.jpg"
-          alt="Modified fixture for flipping 5 foot by 10 foot stainless-steel sheets"
-        >
+
+      <div class="image-grid">
+
+
+        <div class="image-card">
+
+          <img
+            src="sheet-flipper.jpg"
+            alt="Completed sheet flipper modified for 5 foot by 10 foot stainless-steel sheets"
+          >
+
+          <p class="caption">
+            Completed sheet-flipping fixture configured for 5 ft x 10 ft
+            stainless-steel sheet stock.
+          </p>
+
+        </div>
+
+
+        <div class="image-card">
+
+          <img
+            src="sheet-flipper-cad.png"
+            alt="CAD assembly model of the modified sheet flipper"
+          >
+
+          <p class="caption">
+            CAD assembly showing the extended frame, sheet-support members,
+            structural bracing, and overall fixture arrangement.
+          </p>
+
+        </div>
+
 
       </div>
-
-      <p class="caption">
-        Modified sheet flipper configured for 5 ft x 10 ft stainless-steel
-        sheet stock.
-      </p>
 
     </section>
 
@@ -491,8 +531,7 @@
 
           <p>
             Provides a dedicated method for flipping large stainless-steel
-            sheets rather than relying on less controlled material-handling
-            methods.
+            sheets rather than relying on less controlled handling methods.
           </p>
 
         </div>
@@ -536,13 +575,12 @@
 
       <article class="content-card">
 
-        <h2>Design Intent</h2>
+        <h2>Mechanical Design</h2>
 
         <p>
-          The objective was to create a practical modification rather than
-          unnecessarily replace a working fixture. The resulting equipment
-          supports the larger sheet format while providing a repeatable method
-          for flipping stainless-steel material.
+          The CAD assembly was used to define the extended frame, support
+          members, pivoting structure, bracing, and overall arrangement needed
+          to accommodate the larger sheet format.
         </p>
 
       </article>
@@ -556,7 +594,6 @@
       <h2>Portfolio Significance</h2>
 
       <ul>
-
         <li>
           Modified existing equipment for a new production requirement
         </li>
@@ -574,13 +611,12 @@
         </li>
 
         <li>
-          Extended an existing equipment concept rather than replacing it
+          Used CAD to develop and review the equipment modification
         </li>
 
         <li>
           Demonstrates practical manufacturing and material-handling design
         </li>
-
       </ul>
 
     </section>
